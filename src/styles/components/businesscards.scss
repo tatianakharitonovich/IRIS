@@ -1,0 +1,21 @@
+.main__blockbusinesscards {
+    &_title {
+      padding: 70px 0 70px 0;
+    
+      h3 {
+        font-weight: 700;
+        font-size: 50px;
+        text-align: center;
+        color: var(--c-grey);
+      }
+    }
+
+    &_content {
+      width: 84.4%;
+      display: grid;
+      height: 640px;
+      text-align: left;
+      grid-template-columns: 48.6% 3% 48.6%;
+      grid-template-rows: 48% 4.5% 48%;
+    }
+}
