@@ -1,0 +1,24 @@
+-
+  const navLinks = [
+    {link: "/", name: "Главная"}, 
+    {link: "#", name: "О нас"}, 
+    {link: "#", name: "Касса"}, 
+    {link: "#", name: "Сценарии"}
+  ]
+
+header.header
+  .header__content 
+    .header__logo 
+      img(src="img/logo.png", alt="logo", width = "120")
+    nav.header__nav
+      for i in navLinks 
+        a(href=i.link).header__link=i.name  
+    .header__block_phone 
+      a(href="tel:+88005500479") 8 (800) 550-04-79
+      button(class="btn btn__radius--white") Обратный звонок
+      
+      
+
+
+      
+

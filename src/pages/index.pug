@@ -1,0 +1,20 @@
+extends common/layout
+
+block variables
+  -var title = 'My Page'
+
+block content
+  main.main
+    .main__content
+      include includes/index/introduction
+      include includes/index/blockcards
+      section.main__blockbusinesscards
+        include includes/index/businesscards       
+      section.main__blockscenario
+        include includes/index/sectionscenario
+      section.main__blockcashbox
+        include includes/index/blockcashbox
+      section.main__blockorder
+        include includes/index/blockorder
+      
+    //- и другие блоки

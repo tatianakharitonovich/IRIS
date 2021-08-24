@@ -1,0 +1,58 @@
+.main__section {
+    padding: 6px 100px 0 99px;
+        
+    &_wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &_text {
+        width: 40%;
+
+        h4 {
+            font-weight: 600;
+            font-size: 40px;
+            position: relative;
+        }
+
+        h4::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            width: 43%;
+            border: 1.5px solid var(--c-underline);
+            background-color: var(--c-underline);
+        }
+    }
+
+    &_textsource p {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 400;
+        font-size: 30px;
+    }
+
+    &_textopen p {
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    &_picture  {
+        width: 49%;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.margin_top_40 h4 {
+    margin-top: 40px;
+    padding-top: 18px;
+}
+
+.margin_top_0 h4 {
+    margin-top: 0;
+}

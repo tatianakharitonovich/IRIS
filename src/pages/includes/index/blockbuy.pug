@@ -1,0 +1,41 @@
+.main__blockorder_text
+    p Выбери решение, которое максимально подходит твоему бизнесу, и посмотри прогнозируемый рост выручки
+.main__blockorder_calc
+    form(action="").main__blockorder_form
+        div
+            label.main__blockorder_label KTT
+                br
+                select(name="buyCashbox")
+                    option(value="Нева-01-Ф") Нева-01-Ф 
+                    option(value="Волга — Днепр — 006") Волга — Днепр — 006
+        div
+            label.main__blockorder_label Сценарий роста бизнеса
+                br
+                select(name="buyScen1")
+                    option(value="Интерактивные видеоуроки") Интерактивные видеоуроки 
+                    option(value="Автоматические предзаказы") Автоматические предзаказы  
+                    option(value="Видео аналитика") Видео аналитика 
+                    option(value="Оценка эффективности рекламы") Оценка эффективности рекламы
+                    option(value="Анализ конкурентов") Анализ конкурентов
+        .main__blockorder_addscen 
+            button + Добавить сценарий
+        div
+            label.main__blockorder_label Текущая выручка
+                br
+                input(name="buyProceeds", type="text", readonly)
+                br
+                input(type="range", min="1000", max="1000000", step="100").main__blockorder_range 
+    .main__blockorder_price
+        .main__blockorder_textproceeds
+            p.main__blockorder_titleproceeds Прогнозируемый рост выручки
+            p.main__blockorder_priceconnent руб/мес
+        .main__blockorder_texttotal
+            p Итого
+        .main__blockorder_expenses
+            p.main__blockorder_titleexpenses Расходы на СРБ
+            p.main__blockorder_priceconnent руб/мес 
+        .main__blockorder_cash
+            p.main__blockorder_titleexpenses ККТ
+            p.main__blockorder_priceconnent руб
+        .main__blockorder_button 
+            button.btn.btn--white Оставить заявку

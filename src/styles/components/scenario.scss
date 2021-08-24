@@ -1,0 +1,53 @@
+.main__blockscenario {
+    &_wrap {
+        display: flex;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-bottom: 78px;
+    }
+
+    &_wrapcontent {
+        width: 48.6%;
+        min-height: 355px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &_img {
+        width: 48.6%
+    }
+
+    &_title {
+        padding: 0;
+
+        p {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 600;
+            font-size: 35px;
+            position: relative;
+            margin: 0;
+        }
+
+        p::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            width: 43%;
+            border: 1.5px solid var(--c-underline);
+            background-color: var(--c-underline);
+        }
+    }
+
+    &_text {
+        padding-top: 40px;
+
+        p {
+            font-weight: 400;
+            font-size: 25px;
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,6 @@
+include scenario
+
+mixin blockscenario(content)
+    .main__blockscenario_slide
+        +scenario(content.title1, content.text1, content.src1, content.dir1)
+        +scenario(content.title2, content.text2, content.src2, content.dir2)

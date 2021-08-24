@@ -1,0 +1,105 @@
+.main__blockcashbox {
+    &_about {
+        padding: 0 32px 0 100px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_aboutcontent {
+        width: 44%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    &_abouttitle {
+        padding-bottom: 53px;
+
+        h4 {
+            font-weight: 700;
+            font-size: 50px;
+            margin: 0;    
+        }
+    }
+
+    &_aboutsubtitle {
+        padding: 0 0 40px 15px;
+
+        p {
+            font-weight: 600;
+            font-size: 40px;
+            position: relative;
+            margin: 0;
+        }
+
+        p::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            width: 43%;
+            border: 1.5px solid var(--c-underline);
+            background-color: var(--c-underline);
+        }
+    }
+
+    &_abouttext {
+        padding: 0 0 9px 15px;
+
+        p {
+            margin: 0;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+            padding-bottom: 12px;
+        }
+    }
+
+    &_aboutimg {
+        width: 49%;
+    }
+
+    &_swiper {
+        min-height: 461px;
+        padding-top: 120px;
+        background-image: url(../img/backcashbox.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    &_abouprice {
+        text-align: center;
+        padding-top: 42px;
+
+        p {
+            margin: 0;
+            font-weight: 700;
+            font-size: 40px;
+
+            span {
+                font-weight: 400;
+            }
+        
+        }
+    } 
+}
+.swiper-slide_blocksmall {
+    background-color: transparent;
+  
+    img {
+      padding-bottom: 57px;
+      width: 70%;
+    }
+  }
+
+.swiper-pagination-black {
+    .swiper-pagination-bullet {
+        opacity: .1;
+        width: 10px;
+        height: 10px;
+    }
+
+    .swiper-pagination-bullet-active {
+        opacity: 1;
+    }
+}

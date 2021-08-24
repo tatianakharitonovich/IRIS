@@ -1,0 +1,13 @@
+include ../../components/card
+
+-
+  const cardsContent = [
+    {src: 'img/iconlist.svg', title: 'Сценарии «Бизнес роста»', text: 'Выбери сценарий — получи рост на 30% и более'},
+    {src: 'img/iconmc.svg', title: 'Наше ПО', text: 'Проверим вашу ККТ на совместимость с нашим ПО'},
+    {src: 'img/iconeduc.svg', title: 'Обучение', text: '20 лет работы и экспертизы в  розничном бизнесе'},
+    {src: 'img/iconbox.svg', title: 'Решение из коробки', text: 'Достань, подключи, работай'}
+  ] 
+
+section.main__blockcards
+    each content in cardsContent
+        +card (content)   

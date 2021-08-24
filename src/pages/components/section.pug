@@ -1,0 +1,10 @@
+mixin section(content)
+  section.main__section
+    .main__section_wrap  
+      .main__section_text
+        div(class=`margin_top_${content.margin}`)
+          h4=content.subtitle
+        div(class= 'main__section_text'+content.add)
+          p=content.text
+      .main__section_picture 
+        img(alt='schedule', src=content.src, widht=content.width)  
