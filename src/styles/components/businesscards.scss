@@ -1,21 +1,97 @@
 .main__blockbusinesscards {
-    &_title {
-      padding: 70px 0 70px 0;
-    
-      h3 {
-        font-weight: 700;
-        font-size: 50px;
-        text-align: center;
-        color: var(--c-grey);
-      }
+  box-sizing: border-box;
+  
+  &_swipermobile {
+    position: relative;
+    box-sizing: border-box;
+    display: none;
+
+    @include media-tablet {
+      display: block;
+      height: 430px;
+      width: 100%;
+      padding: 0 20px 0 20px;
     }
 
-    &_content {
-      width: 84.4%;
-      display: grid;
-      height: 640px;
-      text-align: left;
-      grid-template-columns: 48.6% 3% 48.6%;
-      grid-template-rows: 48% 4.5% 48%;
+    @include media-tablet-small {
+      height: 330px;
     }
+
+    @include media-mobile-middle {
+      height: 240px;
+    }
+
+    .swiper-pagination-green {
+      @include media-mobile-middle {
+        transform: translateY(18px);
+      }
+    }
+  }
+  
+  &_title {
+    padding: 70px 20px 70px 20px;
+
+    @include media-tablet-horizontal {
+      padding: 0 20px 0 20px;
+    }
+  
+    h3 {
+      font-weight: 700;
+      font-size: 50px;
+      text-align: center;
+      color: var(--c-grey);
+
+      @include media-tablet-horizontal {
+        font-size: 45px;
+      }
+    
+      @include media-tablet {
+        font-size: 35px;
+        color: var(--c-mainfontcolor);
+      }
+
+      @include media-tablet-small {
+        font-size: 30px;
+        margin: 10px 0 0 0;
+        text-align: left;
+      }
+    }
+  }
+
+  &_content {
+    padding: 0 100px 0 100px;
+    width: 100%;
+    min-width: 935px;
+    display: grid;
+    height: 650px;
+    text-align: left;
+    grid-template-columns: 48.6% 3% 48.6%;
+    grid-template-rows: 47.6% 4.68% 47.6%;
+    box-sizing: border-box;
+
+    @include media-tablet-horizontal {
+      height: 500px;
+      min-width: 645px;
+      padding: 0 20px 0 20px;
+    }
+
+    @include media-tablet {
+      font-size: 35px;
+      display: none;
+    }
+  }
+
+  &_contentmobile {
+    width: 100%;
+    height: 350px;
+    text-align: left;
+
+    @include media-tablet-small {
+      height: 250px;
+    }
+
+    @include media-mobile-middle {
+      height: 200px;
+    }    
+  }
 }

@@ -1,64 +1,176 @@
 .main__blockscenario {
-    padding-top: 120px;
+  padding-top: 120px;
 
-    &_title {
-      h3 {
-        font-weight: 700;
-        font-size: 50px;
-        text-align: center;
-        margin: 0;
-      }
-    }
-
-    &_tabs {
-      padding-top: 20px;
-    }
-      
-    &_tabsnav {
-      padding: 0 200px 0 200px;
-      display: flex;
-      justify-content: space-around;
+  @include media-tablet-horizontal {
+    padding-top: 25px;
+  }
+  
+  &_title {
+    
+    h3 {
+      font-weight: 700;
+      font-size: 50px;
+      text-align: center;
       margin: 0;
 
-      li {
-        list-style-type: none;
-
-        a {
-          color: var(--c-mainfontcolor);
-          display: block;
-          font-weight: 600;
-          font-size: 35px;
-          padding: 5px 19px 7px 19px;
-          text-align: center;
-          text-decoration: none;
-        }
-
-        a:hover {
-          text-decoration: underline;
-        }
+      @include media-tablet-horizontal {
+        font-size: 45px;
       }
-    }
+    
+      @include media-tablet {
+        font-size: 35px;
+      }
 
-    &_tabsstage {
-      border-top: 0;
-      clear: both;
-      padding-top: 53px;
-      position: relative;
-      top: -1px;
-    }
-
-    &_tabtext {
-      padding: 0 194px 140px 194px;
-
-      p {
-        font-weight: 600;
+      @include media-tablet-small {
         font-size: 30px;
-        text-align: center;
+        text-align: left;
+        padding: 0 130px 0 20px;
       }
     }
+  }
 
-    &_slide {
-      width: 84.4%;
+  &_tabs {
+    padding-top: 20px;
+  }
+    
+  &_tabsnav {
+    padding: 0 200px 0 200px;
+
+    @include media-tablet-horizontal {
+      padding: 0 20px 0 20px;
+    }
+
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+
+    li {
+      list-style-type: none;
+
+      a {
+        color: var(--c-mainfontcolor);
+        display: block;
+        font-weight: 600;
+        font-size: 35px;
+        padding: 5px 19px 7px 19px;
+        text-align: center;
+        text-decoration: none;
+        
+        @include media-tablet-horizontal {
+          font-size: 30px;
+        }
+      
+        @include media-tablet {
+          font-size: 25px;
+        }
+
+        @include media-tablet-middle {
+          font-size: 20px;
+        }
+
+        @include media-tablet-small {
+          font-size: 18px;
+          padding: 5px 7px 7px 7px;
+        } 
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &_tabsstage {
+    border-top: 0;
+    clear: both;
+    padding-top: 53px;
+    position: relative;
+    top: -1px;
+
+    @include media-tablet-horizontal {
+      padding-top: 30px;
+    }
+
+    @include media-mobile-middle {
+      padding-top: 0;
+    }  
+  }
+
+  &_tabtext {
+    padding: 0 194px 140px 194px;
+
+    @include media-tablet-horizontal {
+      padding: 0 20px 40px 20px;
+    }
+
+    @include media-tablet {
+      display: none;
+    }
+
+    p {
+      font-weight: 600;
+      font-size: 30px;
+      text-align: center;
+    }
+  }
+
+  &_swiper {
+    position: relative;
+    
+    @include media-tablet {
+      display: none;
+    }
+  }
+
+  &_swipermobile {
+    position: relative;
+    display: none;
+
+    @include media-tablet {
+      display: block;
+    }
+  } 
+
+  &_slide {
+    width: 84.4%;
+    text-align: left;
+  }
+
+  &_slide &_wrap:last-child {
+    flex-direction: row-reverse;
+  }
+
+  .main__blockbusinesscards_buttonright, .main__blockbusinesscards_buttonleft {
+    margin-top: -78px;
+  }
+
+  &_tabtextmobile {
+    display: none;
+    padding: 0 20px 0 20px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 37px;
+
+    @include media-tablet {
+      display: block;
       text-align: left;
     }
+
+    @include media-tablet-small {
+      margin: 30px 0 0 0;
+    }    
+  }
+  
+  .swiper-pagination-green {
+    transform: translateY(-310px); 
+    
+    @include media-tablet-small {
+      transform: translateY(-320px); 
+    }
+    
+    @include media-mobile-middle {
+      transform: translateY(-340px);
+    }     
+  }
 }

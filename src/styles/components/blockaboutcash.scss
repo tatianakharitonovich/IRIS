@@ -3,6 +3,14 @@
         padding: 0 32px 0 100px;
         display: flex;
         justify-content: space-between;
+
+        @include media-tablet-horizontal {
+            padding: 0 20px 0 20px;
+        }
+
+        @include media-tablet {
+           flex-direction: column-reverse;
+        }
     }
 
     &_aboutcontent {
@@ -10,26 +18,78 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        @include media-tablet-horizontal {
+            width: 50%;
+        }
+
+        @include media-tablet {
+            width: 100%;
+        }
     }
     
-    &_abouttitle {
+    &_abouttitle, &_abouttitlemobile {
         padding-bottom: 53px;
 
         h4 {
             font-weight: 700;
             font-size: 50px;
-            margin: 0;    
+            margin: 0;
+            
+            @include media-tablet-horizontal {
+                font-size: 45px;
+            }
+            
+            @include media-tablet {
+                font-size: 35px;
+            }
+
+            @include media-tablet-small {
+                font-size: 30px;
+            }
+        }
+    }
+
+    &_abouttitle {
+        @include media-tablet {
+            display: none;
+        }
+    }
+
+    &_abouttitlemobile {
+        display: none;
+        text-align: center;
+        padding-bottom: 20px;
+
+        @include media-tablet {
+            display: block;
         }
     }
 
     &_aboutsubtitle {
         padding: 0 0 40px 15px;
 
+        @include media-tablet-small {
+            padding: 0 0 40px 0;
+        }
+
         p {
             font-weight: 600;
             font-size: 40px;
             position: relative;
             margin: 0;
+
+            @include media-tablet-horizontal {
+                font-size: 35px;
+            }
+            
+            @include media-tablet {
+                font-size: 30px;
+            }
+
+            @include media-tablet-small {
+                font-size: 25px;
+            }
         }
 
         p::after {
@@ -46,17 +106,29 @@
     &_abouttext {
         padding: 0 0 9px 15px;
 
+        @include media-tablet-small {
+            padding: 0 0 18px 0;
+        }
+
         p {
             margin: 0;
             font-weight: 400;
             font-size: 20px;
             line-height: 30px;
             padding-bottom: 12px;
+
+            @include media-tablet-small {
+                font-size: 18px;
+            }
         }
     }
 
     &_aboutimg {
         width: 49%;
+
+        @include media-tablet {
+            width: 100%;
+        }
     }
 
     &_swiper {
@@ -65,23 +137,56 @@
         background-image: url(../img/backcashbox.png);
         background-repeat: no-repeat;
         background-size: 100%;
+        position: relative;
+
+        @include media-tablet-small {
+            padding-top: 80px;
+            min-height: 380px;
+        }
+        
+        @include media-mobile-middle {
+            padding-top: 70px;
+            min-height: 280px;
+        }
     }
 
     &_abouprice {
         text-align: center;
         padding-top: 42px;
 
+        @include media-mobile-middle {
+            padding-top: 0;
+        }
+
         p {
             margin: 0;
             font-weight: 700;
             font-size: 40px;
+
+            @include media-tablet-horizontal {
+                font-size: 35px;
+                padding-bottom: 20px;
+            }
+            
+            @include media-tablet {
+                font-size: 30px;
+            }
+
+            @include media-mobile-middle {
+                font-size: 25px;
+            }
 
             span {
                 font-weight: 400;
             }
         
         }
-    } 
+    }
+    .main__blockbusinesscards_buttonright, .main__blockbusinesscards_buttonleft {
+        @include media-tablet {
+            display: none;
+        }
+    }
 }
 .swiper-slide_blocksmall {
     background-color: transparent;
@@ -89,10 +194,30 @@
     img {
       padding-bottom: 57px;
       width: 70%;
+
+        @include media-tablet {
+            padding-bottom: 185px;
+        }
+
+        @include media-tablet-middle {
+            padding-bottom: 90px;
+        }
+
+        @include media-tablet-small {
+            padding-bottom: 40px;
+        }
+        
+        @include media-mobile-middle {
+            padding-bottom: 0;
+        }
     }
   }
 
 .swiper-pagination-black {
+    @include media-mobile-middle {
+        transform: translateY(-30px);
+    }
+    
     .swiper-pagination-bullet {
         opacity: .1;
         width: 10px;
@@ -101,5 +226,6 @@
 
     .swiper-pagination-bullet-active {
         opacity: 1;
+        background: var(--c-mainfontcolor);
     }
 }

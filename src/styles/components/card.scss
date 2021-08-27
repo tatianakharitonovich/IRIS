@@ -1,8 +1,20 @@
+@import "../mixins/media";
+
 .main__card {
     width: 23%;
+    min-width: 167px;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include media-tablet {
+        min-width: 245px;  
+        padding-bottom: 30px;      
+    }
+
+    @include media-tablet-small {
+        min-width: 157px;
+    }
     
     &_circleunder {
         width: 76px;
@@ -11,6 +23,12 @@
         background-color: var(--c-mainbackground);
         border-radius: 50%;
         z-index: 2;
+
+        @include media-tablet-small {
+            width: 48px;
+            height: 48px;
+            margin-bottom: -48px;
+        }
     }
 
     &_circle {
@@ -23,15 +41,31 @@
         align-items: center;
         border: 5px solid var(--c-mainbackground);
         z-index: 3;
+
+        @include media-tablet-small {
+            width: 48px;
+            height: 48px;
+            border: 3px solid var(--c-mainbackground);
+        }
     }
 
     &_content {
         background-color: var(--c-buttonbackgrount);
         text-align: center;
-        min-height: 211px;
+        height: 214px;
         border-radius: 15px;
         margin-top: -34px;
-        padding: 0 17px 25px 20px; 
+        padding: 0 17px 25px 20px;
+        
+        @include media-tablet-horizontal {
+            padding: 0 12px 10px 15px;
+        }
+
+        @include media-tablet-small {
+            height: 135px;
+            margin-top: -22px;
+            border-radius: 6px;
+        }
     }
 
     &_title p {
@@ -40,17 +74,48 @@
         font-weight: 600;
         font-size: 20px;
         line-height: 20px;
+
+        @include media-tablet-horizontal {
+            font-size: 18px;
+        }
+
+        @include media-tablet-small {
+            margin: 29px 0 10px 0;
+            min-height: 26px;
+            font-size: 12px;
+            line-height: 13px;
+        }
     }
 
     &_text p {
         font-size: 20px;
         line-height: 25px;
         margin: 10px 0 0 0;
+
+        @include media-tablet-horizontal {
+            font-size: 18px;
+            margin: 5px 0 0 0;
+        }
+
+        @include media-tablet-small {
+            font-size: 12px;
+            line-height: 16px;
+        }
     }
 
     &_line {
         height: 0;
         background-color: var(--c-underline);
         border: 1.5px solid var(--c-underline);
+    }
+
+    &_icon {
+        text-align: center;
+
+        img {
+            @include media-tablet-horizontal {
+                width: 62%;
+            }
+        }
     }
 }

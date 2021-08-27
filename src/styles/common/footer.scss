@@ -1,3 +1,5 @@
+@import "../mixins/media";
+
 .footer {
   width: 100%;
   background-color: var(--c-mainbackground);
@@ -15,6 +17,23 @@
     flex-direction: column;
     justify-content: space-between; 
     align-items: start;
+
+    @include media-tablet-horizontal {
+      padding: 215px 20px 85px 20px;
+    }
+
+    @include media-tablet {
+      padding: 150px 20px 85px 20px;
+    }
+
+    @include media-tablet-middle {
+      clip-path: polygon(0 0, 50% 5%, 100% 0%, 100% 100%, 0 100%);
+    }
+
+    @include media-mobile-middle {
+      padding: 63px 20px 85px 20px;
+      clip-path: polygon(0 0, 50% 3%, 100% 0%, 100% 100%, 0 100%);
+    }
   }
 
   &__blockorder {
@@ -22,8 +41,21 @@
     justify-content: space-between;
     padding-bottom: 50px;
 
+    @include media-tablet {
+      flex-direction: column;
+      padding-bottom: 42px;
+    }
+
     &_content {
       width: 54%;
+
+      @include media-tablet-horizontal {
+        width: 45%;
+      }
+
+      @include media-tablet {
+        width: 100%;
+      }
     }
 
     &_text {
@@ -34,23 +66,68 @@
         font-size: 55px;
         line-height: 110%;
         margin: 0;
+
+        @include media-tablet-horizontal {
+          font-size: 40px;
+        }
+
+        @include media-tablet {
+          font-size: 30px;
+          font-weight: 600;
+        }
       }
     }
 
     &_logo {
+      @include media-tablet {
+        display: none;
+      }
       img {
         width: 39%;
+
+        @include media-tablet-horizontal {
+          width: 60%;
+        }
+      }
+    }
+
+    &_logomobile {
+      display: none;
+      padding: 30px 0 0 0;
+      text-align: center; 
+
+      @include media-tablet {
+        display: block;
+      }
+
+      img {
+        width: 67%;
       }
     }
 
     &_input {
       width: 36%;
 
+      @include media-tablet-horizontal {
+        width: 52%;
+      }
+
+      @include media-tablet {
+        width: 100%;
+      }
+  
+
       p {
         font-weight: 400;
         font-size: 20px;
         line-height: 25px;
         margin: 16px 0 5px 0;
+        
+        @include media-mobile-middle {
+          font-size: 14px;
+          line-height: 22px;
+          margin: 10px 0 5px 0;
+        }
       }
 
       input {
@@ -62,6 +139,15 @@
         border-radius: 7px;
         border: none;
         outline: none;
+
+        @include media-tablet-horizontal {
+          font-size: 20px;
+        }
+
+        @include media-mobile-middle {
+          font-size: 18px;
+          padding: 14px 0 14px 7px;
+        }
       }
     }
 
@@ -69,6 +155,10 @@
       display: flex;
       justify-content: space-between;
       padding: 50px 0 48px 0;
+
+      @include media-mobile-middle {
+        padding: 34px 0 30px 0;
+      }
 
       input {
         width: 20px;
@@ -89,16 +179,24 @@
   &__contacts {
     width: 100%;
     max-width: 618px;
-
+    
     &_data {
       display: flex;
       justify-content: space-between;
+
+      @include media-tablet-middle {
+        flex-direction: column-reverse;
+      }
 
       p {
         font-weight: 400;
         font-size: 14px;
         line-height: 110%;
         opacity: 0.7;
+
+        @include media-tablet-middle {
+          margin: 15px 0 5px 0;
+        }
       }
       
       a {
@@ -112,7 +210,15 @@
     }
 
     &_emailblock {
-      width: 47.5%; 
+      width: 47.5%;
+      
+      @include media-tablet-middle {
+        width: 100%;
+      }
+
+      @include media-tablet-middle {
+        padding-top: 15px;
+      }
 
       a {
         position: relative;
@@ -127,6 +233,10 @@
         width: 128%;
         background-color: var(--c-mainfontcolor);
         opacity: 0.5;
+
+        @include media-tablet-middle {
+          width: 100%;
+        }
       }
     }
 
@@ -150,11 +260,21 @@
     &_info {
       padding-top: 46px;
 
+      @include media-mobile-middle {
+        padding-top: 20px;
+      }
+
       p {
         font-weight: 400;
         font-size: 16px;
         line-height: 120%;
         opacity: 0.7;
+
+        @include media-mobile-middle {
+          font-size: 12px;
+          line-height: 120%;
+          margin: 12px 0 0 0;
+        }
       }
     }
   }

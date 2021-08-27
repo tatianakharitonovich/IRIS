@@ -1,4 +1,5 @@
 @import "../utils/root";
+@import "../mixins/media";
 
 .btn { 
     background-color: var(--c-buttonbackgrount);
@@ -10,9 +11,30 @@
     font-size: 25px;
     padding: 15px 80px 15px 80px;
 
+    @include media-tablet {
+        width: 100%;
+    }
+
+    @include media-tablet-middle {
+        font-size: 20px;
+    }
+
+    @include media-mobile-middle {
+        font-size: 18px;
+    }
+
     &--white {
         color: var(--c-white);
         padding: 25px 80px 25px 80px;
+
+        @include media-tablet-horizontal {
+            padding: 25px 65px 25px 65px;
+            width: 100%;
+        }
+
+        @include media-tablet {
+            padding: 25px 75px 25px 75px;
+        }
 
     }
 
@@ -29,8 +51,12 @@
         color: var(--c-white);
         font-family: 'Source Sans Pro', sans-serif;
         font-weight: 600;
-        font-size: 20px;
+        font-size: 1.25em;
         padding: 0;
+
+        @include media-tablet-horizontal {
+            font-size: 1em;
+        }
     }
 }
 

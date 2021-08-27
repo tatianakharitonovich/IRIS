@@ -23,43 +23,30 @@ include ../../components/businesscard
 
 
 .main__blockbusinesscards_title
-    h3 Выбери сферу своего бизнеса
-.swiper-container.mySwiper
+  h3 Выбери сферу своего бизнеса
+.main__blockbusinesscards_content
+  +businesscard (businesscardContent1)
+  div
+  +businesscard (businesscardContent2)
+  div
+  div
+  div   
+  +businesscard (businesscardContent3)
+  div
+  +businesscard (businesscardContent4)         
+.main__blockbusinesscards_swipermobile
+  .swiper-container.mySwiper
     .swiper-wrapper.swiper-wraper_block
-        .swiper-slide.swiper-slide_block
-            .main__blockbusinesscards_content
-                +businesscard (businesscardContent1)
-                div
-                +businesscard (businesscardContent2)
-                div
-                div
-                div   
-                +businesscard (businesscardContent3)
-                div
-                +businesscard (businesscardContent4)       
-        .swiper-slide.swiper-slide_block
-            .main__blockbusinesscards_content
-                +businesscard (businesscardContent1)
-                div
-                +businesscard (businesscardContent2)
-                div
-                div
-                div   
-                +businesscard (businesscardContent3)
-                div
-                +businesscard (businesscardContent4)   
-        .swiper-slide.swiper-slide_block
-            .main__blockbusinesscards_content
-                +businesscard (businesscardContent1)
-                div
-                +businesscard (businesscardContent2)
-                div
-                div
-                div   
-                +businesscard (businesscardContent3)
-                div
-                +businesscard (businesscardContent4)   
-    .swiper-button-next.main__blockbusinesscards_buttonright
-        img(src='img/arrowwhite.svg', alt='')
-    .swiper-button-prev.main__blockbusinesscards_buttonleft
-        img(src='img/arrowwhite.svg', alt='')
+      .swiper-slide.swiper-slide_block
+        .main__blockbusinesscards_contentmobile
+          +businesscard (businesscardContent1)
+      .swiper-slide.swiper-slide_block
+        .main__blockbusinesscards_contentmobile
+          +businesscard (businesscardContent2)
+      .swiper-slide.swiper-slide_block
+        .main__blockbusinesscards_contentmobile
+          +businesscard (businesscardContent3)
+      .swiper-slide.swiper-slide_block
+        .main__blockbusinesscards_contentmobile
+          +businesscard (businesscardContent4)             
+    .swiper-pagination.swiper-pagination-green
