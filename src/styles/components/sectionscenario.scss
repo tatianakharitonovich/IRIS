@@ -171,6 +171,10 @@
     
     @include media-mobile-middle {
       transform: translateY(-340px);
-    }     
+    }
+    
+    @include media-mobile {
+      transform: translateY(-320px);
+    } 
   }
 }

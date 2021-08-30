@@ -170,11 +170,33 @@
             }
         }
 
+        &_selectScen &_selectScenblock:first-child button{
+            visibility: hidden;
+            cursor: default;
+        }
+
+        &_selectScenblock, &_selectCash {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            width: 105%;
+
+            @include media-tablet-horizontal {
+                width: 100%;
+            }
+        }
+        
+        &_selectCash button {
+            visibility: hidden;
+            cursor: default;
+        }
+
         &_label {
             font-weight: 600;
             font-size: 20px;
             color: var(--c-formtextcolor);
             line-height: 40px;
+            width: 100%;
 
             @include media-mobile-middle {
                 font-size: 14px;
@@ -206,6 +228,20 @@
 
             input:focus {
                 outline: none;
+            }
+        }
+
+        &_buttonclosescen, &_buttonclosecash {
+            padding-top: 10px;
+            
+            button {
+                background-color: transparent;
+                border: none;
+                cursor: pointer;                      
+            }
+
+            button:hover {
+                transform: scale(1.2);
             }
         }
 

@@ -1,23 +1,83 @@
 .main__blockorder_calc
     form(action="").main__blockorder_form
-        div
+        .main__blockorder_selectCash
             label.main__blockorder_label KTT
                 br
-                select(name="rentCashbox")
+                select(name="rentCashbox", data="typeOfCash")
                     option(value="Нева-01-Ф") Нева-01-Ф 
                     option(value="Волга — Днепр — 006") Волга — Днепр — 006
-        div
-            label.main__blockorder_label Сценарий роста бизнеса
-                br
-                select(name="rentScen1")
-                    option(value="Интерактивные видеоуроки") Интерактивные видеоуроки 
-                    option(value="Автоматические предзаказы") Автоматические предзаказы  
-                    option(value="Видео аналитика") Видео аналитика 
-                    option(value="Оценка эффективности рекламы") Оценка эффективности рекламы
-                    option(value="Анализ конкурентов") Анализ конкурентов
+            .main__blockorder_buttonclosecash 
+                button
+                    img(src="img/close.png", alt='', width=19)         
+        .main__blockorder_selectScen
+            .main__blockorder_selectScenblock(style='display: flex')
+                label.main__blockorder_label Сценарий роста бизнеса
+                    br
+                    select(name="buyScen1")
+                        option(value="Нет") Нет
+                        option(value="Интерактивные видеоуроки") Интерактивные видеоуроки 
+                        option(value="Автоматические предзаказы") Автоматические предзаказы  
+                        option(value="Видео аналитика") Видео аналитика 
+                        option(value="Оценка эффективности рекламы") Оценка эффективности рекламы
+                        option(value="Анализ конкурентов") Анализ конкурентов
+                .main__blockorder_buttonclosescen 
+                    button
+                        img(src="img/close.png", alt='', width=19) 
+            .main__blockorder_selectScenblock(style='display: none')
+                label.main__blockorder_label Сценарий роста бизнеса
+                    br
+                    select(name="buyScen2")
+                        option(value="Нет") Нет
+                        option(value="Интерактивные видеоуроки") Интерактивные видеоуроки 
+                        option(value="Автоматические предзаказы") Автоматические предзаказы  
+                        option(value="Видео аналитика") Видео аналитика 
+                        option(value="Оценка эффективности рекламы") Оценка эффективности рекламы
+                        option(value="Анализ конкурентов") Анализ конкурентов
+                .main__blockorder_buttonclosescen 
+                    button
+                        img(src="img/close.png", alt='', width=19) 
+            .main__blockorder_selectScenblock(style='display: none')        
+                label.main__blockorder_label Сценарий роста бизнеса
+                    br
+                    select(name="buyScen3")
+                        option(value="Нет") Нет
+                        option(value="Интерактивные видеоуроки") Интерактивные видеоуроки 
+                        option(value="Автоматические предзаказы") Автоматические предзаказы  
+                        option(value="Видео аналитика") Видео аналитика 
+                        option(value="Оценка эффективности рекламы") Оценка эффективности рекламы
+                        option(value="Анализ конкурентов") Анализ конкурентов
+                .main__blockorder_buttonclosescen 
+                    button
+                        img(src="img/close.png", alt='', width=19) 
+            .main__blockorder_selectScenblock(style='display: none')    
+                label.main__blockorder_label Сценарий роста бизнеса
+                    br
+                    select(name="buyScen4")
+                        option(value="Нет") Нет
+                        option(value="Интерактивные видеоуроки") Интерактивные видеоуроки 
+                        option(value="Автоматические предзаказы") Автоматические предзаказы  
+                        option(value="Видео аналитика") Видео аналитика 
+                        option(value="Оценка эффективности рекламы") Оценка эффективности рекламы
+                        option(value="Анализ конкурентов") Анализ конкурентов 
+                .main__blockorder_buttonclosescen 
+                    button
+                        img(src="img/close.png", alt='', width=19)                    
+            .main__blockorder_selectScenblock(style='display: none')    
+                label.main__blockorder_label Сценарий роста бизнеса
+                    br
+                    select(name="buyScen5")
+                        option(value="Нет") Нет
+                        option(value="Интерактивные видеоуроки") Интерактивные видеоуроки 
+                        option(value="Автоматические предзаказы") Автоматические предзаказы  
+                        option(value="Видео аналитика") Видео аналитика 
+                        option(value="Оценка эффективности рекламы") Оценка эффективности рекламы
+                        option(value="Анализ конкурентов") Анализ конкурентов
+                .main__blockorder_buttonclosescen 
+                    button
+                        img(src="img/close.png", alt='', width=19)        
         .main__blockorder_addscen 
             button + Добавить сценарий
-        div
+        .main__blockorder_inputproceeds
             label.main__blockorder_label Текущая выручка
                 br
                 input(name="rentProceeds" type="text" readonly)
