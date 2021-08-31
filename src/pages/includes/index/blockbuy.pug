@@ -86,16 +86,17 @@
                 br
                 input(type="range", min="1000", max="1000000", step="100", value="240000").main__blockorder_range 
     .main__blockorder_price
-        .main__blockorder_textproceeds
-            p.main__blockorder_titleproceeds Прогнозируемый рост выручки
-            p.main__blockorder_priceconnent руб/мес
-        .main__blockorder_texttotal
-            p Итого
-        .main__blockorder_expenses
-            p.main__blockorder_titleexpenses Расходы на СРБ
-            p.main__blockorder_priceconnent руб/мес 
-        .main__blockorder_cash
-            p.main__blockorder_titleexpenses ККТ
-            p.main__blockorder_priceconnent руб
+        .main__blockorder_proceedscalc 
+            .main__blockorder_textproceeds
+                p.main__blockorder_titleproceeds Прогнозируемый рост выручки
+                p.main__blockorder_priceconnent руб/мес
+            .main__blockorder_texttotal
+                p Итого
+            .main__blockorder_expenses
+                p.main__blockorder_titleexpenses Расходы на СРБ
+                p.main__blockorder_priceconnent 0 руб/мес
+            .main__blockorder_cash
+                p.main__blockorder_titleexpenses ККТ
+                p.main__blockorder_priceconnent руб
         .main__blockorder_button 
             button.btn.btn--white Оставить заявку

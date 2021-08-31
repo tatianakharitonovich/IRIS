@@ -6,12 +6,15 @@ block variables
 block content
   main.main
     .main__content
+      a(name="main")
       include includes/index/introduction
       include includes/index/blockcards
       section.main__blockbusinesscards
         include includes/index/businesscards       
+      a(name="scenarios")
       section.main__blockscenario
         include includes/index/sectionscenario
+      a(name="cashBox")  
       section.main__blockcashbox
         include includes/index/blockcashbox
       section.main__blockorder

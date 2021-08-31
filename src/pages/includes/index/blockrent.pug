@@ -13,7 +13,7 @@
             .main__blockorder_selectScenblock(style='display: flex')
                 label.main__blockorder_label Сценарий роста бизнеса
                     br
-                    select(name="buyScen1")
+                    select(name="rentScen1")
                         option(value="Нет") Нет
                         option(value="Интерактивные видеоуроки") Интерактивные видеоуроки 
                         option(value="Автоматические предзаказы") Автоматические предзаказы  
@@ -26,7 +26,7 @@
             .main__blockorder_selectScenblock(style='display: none')
                 label.main__blockorder_label Сценарий роста бизнеса
                     br
-                    select(name="buyScen2")
+                    select(name="rentScen2")
                         option(value="Нет") Нет
                         option(value="Интерактивные видеоуроки") Интерактивные видеоуроки 
                         option(value="Автоматические предзаказы") Автоматические предзаказы  
@@ -39,7 +39,7 @@
             .main__blockorder_selectScenblock(style='display: none')        
                 label.main__blockorder_label Сценарий роста бизнеса
                     br
-                    select(name="buyScen3")
+                    select(name="rentScen3")
                         option(value="Нет") Нет
                         option(value="Интерактивные видеоуроки") Интерактивные видеоуроки 
                         option(value="Автоматические предзаказы") Автоматические предзаказы  
@@ -52,7 +52,7 @@
             .main__blockorder_selectScenblock(style='display: none')    
                 label.main__blockorder_label Сценарий роста бизнеса
                     br
-                    select(name="buyScen4")
+                    select(name="rentScen4")
                         option(value="Нет") Нет
                         option(value="Интерактивные видеоуроки") Интерактивные видеоуроки 
                         option(value="Автоматические предзаказы") Автоматические предзаказы  
@@ -65,7 +65,7 @@
             .main__blockorder_selectScenblock(style='display: none')    
                 label.main__blockorder_label Сценарий роста бизнеса
                     br
-                    select(name="buyScen5")
+                    select(name="rentScen5")
                         option(value="Нет") Нет
                         option(value="Интерактивные видеоуроки") Интерактивные видеоуроки 
                         option(value="Автоматические предзаказы") Автоматические предзаказы  
@@ -84,16 +84,17 @@
                 br
                 input(type="range", min="1000", max="1000000", step="100", value="240000").main__blockorder_range 
     .main__blockorder_price
-        .main__blockorder_textproceeds
-            p.main__blockorder_titleproceeds Прогнозируемый рост выручки
-            p.main__blockorder_priceconnent руб/мес
-        .main__blockorder_texttotal
-            p Итого
-        .main__blockorder_expenses
-            p.main__blockorder_titleexpenses Расходы на СРБ
-            p.main__blockorder_priceconnent руб/мес 
-        .main__blockorder_cash
-            p.main__blockorder_titleexpenses ККТ
-            p.main__blockorder_priceconnent руб
+        .main__blockorder_proceedscalc
+            .main__blockorder_textproceeds
+                p.main__blockorder_titleproceeds Прогнозируемый рост выручки
+                p.main__blockorder_priceconnent руб/мес
+            .main__blockorder_texttotal
+                p Итого
+            .main__blockorder_expenses
+                p.main__blockorder_titleexpenses Расходы на СРБ
+                p.main__blockorder_priceconnent 0 руб/мес 
+            .main__blockorder_cash
+                p.main__blockorder_titleexpenses ККТ
+                p.main__blockorder_priceconnent руб
         .main__blockorder_button 
             button.btn.btn--white Оставить заявку
