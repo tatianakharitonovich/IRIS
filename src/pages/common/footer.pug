@@ -10,16 +10,16 @@ footer.footer
             form(id="footer_order").footer__blockorder_input
                 .footer__blockorder_city 
                     p Город
-                    input(name="orderCity", type="text", placeholder ='Москва')
+                    input(name="orderCityFooter", type="text", placeholder ='Москва')
                 .footer__blockorder_name 
                     p Имя
-                    input(name="orderName", type="text", placeholder ='Иванов Иван Иванович')
+                    input(name="orderNameFooter", type="text", placeholder ='Иванов Иван Иванович')
                 .footer__blockorder_phone
                     p Телефон
-                    input(name="orderPnone", type="text", placeholder ='+7', pattern="\+[0-9]{3}[\(][0-9]{2}[\)]\d{3}[-]\d{2}[-]\d{2}")
+                    input(name="orderPnoneFooter", type="text", placeholder ="+____________")
                 .footer__blockorder_sub
-                    input(id="sub", name="orderSub", type="checkbox")
-                    label(for="sub") Я согласен с условиями сбора и обработки персональных данных
+                    input(id="subfooter", name="orderSub", type="checkbox").footer__blockorder_checkbox
+                    label(for="subfooter").footer__blockorder_label Я согласен с условиями сбора и обработки персональных данных
                 .footer__blockorder_button 
                     button.btn.btn--whiteback Оставить заявку
                 .footer__blockorder_logomobile

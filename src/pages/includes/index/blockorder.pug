@@ -15,3 +15,24 @@
             include blockrent
         #taborder-3
             include blocksoft
+div(id="popupWin").modalwin
+    button(id="buttonClose").modalwin__button_close
+        img(src="img/closemodal.png", alt='', width=27)
+    .modalwin__wrap    
+        .modalwin__title
+            h2 Заявка
+        form(id="form_blockorder").modalwin__blockorder_input
+            .modalwin__blockorder_city 
+                p Город
+                input(name="orderCity", type="text", placeholder ='Москва')
+            .modalwin__blockorder_name 
+                p Имя
+                input(name="orderName", type="text", placeholder ='Иванов Иван Иванович')
+            .modalwin__blockorder_phone
+                p Телефон
+                input(name="orderPnone", type="text", placeholder ="+____________")
+            .modalwin__blockorder_sub
+                input(id="sub", name="orderSub", type="checkbox")
+                label(for="sub") Я согласен с условиями сбора и обработки персональных данных
+            .modalwin__blockorder_button 
+                button.btn.btn--white Оставить заявку            	
