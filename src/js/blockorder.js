@@ -215,8 +215,6 @@ buttonsSubmit.forEach((button, index) => {
     button.addEventListener('click', (event)=> showModalWin (event, index))
 });
 
-const arrayForm = [];
-
 function showModalWin (event, index) {
     event.preventDefault();
 
@@ -241,12 +239,7 @@ function showModalWin (event, index) {
                 
         const formOrderActual = jQuery(document.forms[`${formsOrder[index].id}`]).serializeArray();
 
-        formOrderActual.forEach(function(value) {
-            arrayForm.push(value);
-        });
-              
-
-        openModalWin();
+        openModalWin(formOrderActual);
         
         // location.reload();
 
@@ -288,7 +281,7 @@ function showModalWin (event, index) {
     }
 }
 
-function openModalWin () {
+function openModalWin (formOrderActual) {
     darkLayer.style.display='block';
     modalWin.style.display = 'flex';
 
@@ -360,14 +353,16 @@ function openModalWin () {
 
                 const formDataOrder = new FormData(form_blockorder);
 
-                for (let i=1; i<=arrayForm.length; i++)
-                formDataOrder.append(arrayForm[i-1].name, arrayForm[i-1].value);
+                for (let i=1; i<=formOrderActual.length; i++)
+                formDataOrder.append(formOrderActual[i-1].name, formOrderActual[i-1].value);
 
                 // const formArray = [];        
 
                 // formDataOrder.forEach(function(value) {
                 //     formArray.push(value);
                 // });
+
+                // console.log(formArray);
 
                
                 // fetch('https://', {
