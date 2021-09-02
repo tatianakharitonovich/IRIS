@@ -87,8 +87,6 @@ function changePriceCashString (event, string) {
     })
 }
 
-
-
 buttonsCloseScenario.forEach((item, index) => {
     item.addEventListener('click', (event) => {
         event.preventDefault();
@@ -139,7 +137,7 @@ function addBlockCompetitor (event, block) {
             buttonContainer.classList.add('main__blockorder_buttonclosescen');
             img.src='img/close.png';
             img.width = 19;
-            input.name = event.target.name + ` competitor ${i}`;
+            input.name = event.target.name + '_competitors[]';
             input.type = 'text';
             
             if (i===3) {
@@ -240,6 +238,7 @@ function showModalWin (event, index) {
         const formOrderActual = jQuery(document.forms[`${formsOrder[index].id}`]).serializeArray();
 
         openModalWin(formOrderActual);
+        console.log(formOrderActual);
         
         // location.reload();
 
@@ -356,13 +355,13 @@ function openModalWin (formOrderActual) {
                 for (let i=1; i<=formOrderActual.length; i++)
                 formDataOrder.append(formOrderActual[i-1].name, formOrderActual[i-1].value);
 
-                // const formArray = [];        
+                const formArray = [];        
 
-                // formDataOrder.forEach(function(value) {
-                //     formArray.push(value);
-                // });
+                formDataOrder.forEach(function(value) {
+                    formArray.push(value);
+                });
 
-                // console.log(formArray);
+                console.log(formArray);
 
                
                 // fetch('https://', {

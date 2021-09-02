@@ -31,63 +31,13 @@
 
         &_tabs {
             padding-top: 20px;
-        }
+        }        
         
-        &_tabsnav {
-            padding: 0 200px 0 200px;
-            display: flex;
-            justify-content: space-around;
-            margin: 0;
-
-            @include media-tablet-horizontal {
-                padding: 0 20px 0 20px;
-            }
-
-            li {
-                list-style-type: none;
-
-                a {
-                    color: var(--c-mainfontcolor);
-                    display: block;
-                    font-weight: 600;
-                    font-size: 35px;
-                    padding: 5px 19px 7px 19px;
-                    text-align: center;
-                    text-decoration: none;
-
-                    @include media-tablet-horizontal {
-                        font-size: 30px;
-                    }
-                    
-                    @include media-tablet {
-                        font-size: 25px;
-                    }
-
-                    @include media-tablet-middle {
-                        font-size: 20px;
-                    }
-              
-                    @include media-tablet-small {
-                        font-size: 18px;
-                        padding: 5px 7px 7px 7px;
-                    } 
-                }
-
-                a:hover {
-                    text-decoration: underline;
-                }
-            }
-        }
-
         &_tabsstage {
-            border-top: 0;
             width: 100%;
             margin: 0 auto;
-            clear: both;
             padding: 54px 100px 354px 100px;
-            position: relative;
-            top: -1px;
-
+            
             @include media-tablet-horizontal {
                 padding: 30px 20px 200px 20px;
             }
@@ -458,6 +408,10 @@
     align-items: flex-end;
     display: none; 
     position: fixed;
+
+    @include media-tablet-horizontal  {
+        width: 85%;
+    }
     
 
     &__wrap { 
@@ -631,24 +585,29 @@
     input[type="checkbox"]:checked + label:after {
         opacity: 1;
     }
-}
 
-.modalwin__button_close {
-	width: 27px;
-	height: 27px;
-    cursor: pointer;
-	margin: 0 0 8px 0;
-    padding: 0;
-	background-color: transparent;
-	outline: none;
-	border: 0;
-    transform: translateX(35px);
+    &__button_close {
+        width: 27px;
+        height: 27px;
+        cursor: pointer;
+        margin: 0 0 8px 0;
+        padding: 0;
+        background-color: transparent;
+        outline: none;
+        border: 0;
+        transform: translateX(35px);
     
-    img {
-        width: 100%;
+        @include media-tablet-horizontal  {
+            transform: translateX(25px);
+            width: 20px;
+            height: 20px;
+        }
+        
+        img {
+            width: 100%;
+        }
     }
 }
-
 
 #shadow { 
     position: fixed;

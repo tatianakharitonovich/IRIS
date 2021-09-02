@@ -31,71 +31,8 @@
 
   &_tabs {
     padding-top: 20px;
-  }
-    
-  &_tabsnav {
-    padding: 0 200px 0 200px;
-
-    @include media-tablet-horizontal {
-      padding: 0 20px 0 20px;
-    }
-
-    display: flex;
-    justify-content: space-around;
-    margin: 0;
-
-    li {
-      list-style-type: none;
-
-      a {
-        color: var(--c-mainfontcolor);
-        display: block;
-        font-weight: 600;
-        font-size: 35px;
-        padding: 5px 19px 7px 19px;
-        text-align: center;
-        text-decoration: none;
-        
-        @include media-tablet-horizontal {
-          font-size: 30px;
-        }
-      
-        @include media-tablet {
-          font-size: 25px;
-        }
-
-        @include media-tablet-middle {
-          font-size: 20px;
-        }
-
-        @include media-tablet-small {
-          font-size: 18px;
-          padding: 5px 7px 7px 7px;
-        } 
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-
-  &_tabsstage {
-    border-top: 0;
-    clear: both;
-    padding-top: 53px;
-    position: relative;
-    top: -1px;
-
-    @include media-tablet-horizontal {
-      padding-top: 30px;
-    }
-
-    @include media-mobile-middle {
-      padding-top: 0;
-    }  
-  }
-
+  }  
+ 
   &_tabtext {
     padding: 0 194px 140px 194px;
 

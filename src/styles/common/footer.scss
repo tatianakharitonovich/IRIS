@@ -2,16 +2,24 @@
 
 .footer {
   width: 100%;
-  background-color: var(--c-mainbackground);
+  background-color: var(--c-buttonbackgrount);
   display: flex;
   justify-content: center;
+  clip-path: polygon(0 0, 50% 7.3%, 100% 0%, 100% 100%, 0 100%);
+
+  @include media-tablet-middle {
+    clip-path: polygon(0 0, 50% 5%, 100% 0%, 100% 100%, 0 100%);
+  }
+
+  @include media-mobile-middle {
+    clip-path: polygon(0 0, 50% 3%, 100% 0%, 100% 100%, 0 100%);
+  }
     
   &__content {
     width: 100%;
     max-width: 1280px;
-    background-color: var(--c-buttonbackgrount);
     min-height: 1069px;
-    clip-path: polygon(0 0, 50% 7.3%, 100% 0%, 100% 100%, 0 100%);
+    
     padding: 215px 99px 72px 100px;
     display: flex;
     flex-direction: column;
@@ -26,13 +34,10 @@
       padding: 150px 20px 85px 20px;
     }
 
-    @include media-tablet-middle {
-      clip-path: polygon(0 0, 50% 5%, 100% 0%, 100% 100%, 0 100%);
-    }
+    
 
     @include media-mobile-middle {
-      padding: 63px 20px 85px 20px;
-      clip-path: polygon(0 0, 50% 3%, 100% 0%, 100% 100%, 0 100%);
+      padding: 63px 20px 85px 20px;      
     }
   }
 
