@@ -2,7 +2,7 @@
 
 .footer {
   width: 100%;
-  background-color: var(--c-buttonbackgrount);
+  background-color: var(--c-button-backgrount);
   display: flex;
   justify-content: center;
   clip-path: polygon(0 0, 50% 7.3%, 100% 0%, 100% 100%, 0 100%);
@@ -14,17 +14,16 @@
   @include media-mobile-middle {
     clip-path: polygon(0 0, 50% 3%, 100% 0%, 100% 100%, 0 100%);
   }
-    
+
   &__content {
     width: 100%;
     max-width: 1280px;
     min-height: 1069px;
-    
     padding: 215px 99px 72px 100px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
-    align-items: start;
+    justify-content: space-between;
+    align-items: flex-start;
 
     @include media-tablet-horizontal {
       padding: 215px 20px 85px 20px;
@@ -34,10 +33,9 @@
       padding: 150px 20px 85px 20px;
     }
 
-    
 
     @include media-mobile-middle {
-      padding: 63px 20px 85px 20px;      
+      padding: 63px 20px 85px 20px;
     }
   }
 
@@ -65,7 +63,7 @@
 
     &_text {
       padding: 0 0 46px 0;
-      
+
       p {
         font-weight: 400;
         font-size: 55px;
@@ -84,9 +82,11 @@
     }
 
     &_logo {
+
       @include media-tablet {
         display: none;
       }
+
       img {
         width: 39%;
 
@@ -99,7 +99,7 @@
     &_logomobile {
       display: none;
       padding: 30px 0 0 0;
-      text-align: center; 
+      text-align: center;
 
       @include media-tablet {
         display: block;
@@ -120,14 +120,14 @@
       @include media-tablet {
         width: 100%;
       }
-  
+
 
       p {
         font-weight: 400;
         font-size: 20px;
         line-height: 25px;
         margin: 16px 0 5px 0;
-        
+
         @include media-mobile-middle {
           font-size: 14px;
           line-height: 22px;
@@ -184,7 +184,7 @@
   &__contacts {
     width: 100%;
     max-width: 618px;
-    
+
     &_data {
       display: flex;
       justify-content: space-between;
@@ -203,20 +203,20 @@
           margin: 15px 0 5px 0;
         }
       }
-      
+
       a {
-        font-family: 'Open Sans', sans-serif;
+        font-family: "Open Sans", sans-serif;
         font-weight: 400;
         font-size: 30px;
         line-height: 100%;
         margin: 0;
-        color: var(--c-mainfontcolor);
+        color: var(--c-main-font);
       }
     }
 
     &_emailblock {
       width: 47.5%;
-      
+
       @include media-tablet-middle {
         width: 100%;
       }
@@ -229,14 +229,14 @@
         position: relative;
       }
 
-      a:after {
-        content: '';
+      a::after {
+        content: "";
         position: absolute;
         bottom: -5px;
         left: 0;
         height: 1px;
         width: 128%;
-        background-color: var(--c-mainfontcolor);
+        background-color: var(--c-main-font);
         opacity: 0.5;
 
         @include media-tablet-middle {
@@ -245,19 +245,19 @@
       }
     }
 
-    &_phoneblock  {
+    &_phoneblock {
       a {
         position: relative;
       }
 
-      a:after {
-        content: '';
+      a::after {
+        content: "";
         position: absolute;
         bottom: -5px;
         left: 0;
         height: 1px;
         width: 100%;
-        background-color: var(--c-mainfontcolor);
+        background-color: var(--c-main-font);
         opacity: 0.5;
       }
     }
@@ -284,69 +284,54 @@
     }
   }
 
-  .footer__blockorder_checkbox:checked, 
-  .footer__blockorder_checkbox:not(:checked) {
-      position: absolute;
-      left: -9999px;
+  input[type="checkbox"]:checked,
+  input[type="checkbox"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
   }
 
-  .footer__blockorder_checkbox:checked + .footer__blockorder_label, 
-  .footer__blockorder_checkbox:not(:checked) + .footer__blockorder_label {
-      display: inline-block;
-      position: relative;
-      padding-left: 28px;
-      line-height: 20px;
-      cursor: pointer;
+  input[type="checkbox"]:checked + label,
+  input[type="checkbox"]:not(:checked) + label {
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+    line-height: 20px;
+    cursor: pointer;
   }
 
-  .footer__blockorder_checkbox:checked + .footer__blockorder_label:before, 
-  .footer__blockorder_checkbox:not(:checked) + .footer__blockorder_label:before {
-      content: "";
-      position: absolute;
-      left: 0px;
-      top: 0px;
-      width: 20px;
-      height: 20px;
-      border: 1px solid var(--c-white);
-      background-color: var(--c-white);
+  input[type="checkbox"]:checked + label::before,
+  input[type="checkbox"]:not(:checked) + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--c-white);
+    background-color: var(--c-white);
+    border-radius: 5px;
   }
 
-  .footer__blockorder_checkbox:checked + .footer__blockorder_label:before, 
-  .footer__blockorder_checkbox:not(:checked) + .footer__blockorder_label:before {
-      border-radius: 5px;
+  input[type="checkbox"]:checked + label::after,
+  input[type="checkbox"]:not(:checked) + label::after {
+    content: "";
+    position: absolute;
+    transition: all 0.2s ease;
+    left: 4px;
+    top: 5px;
+    width: 13px;
+    height: 7px;
+    border-radius: 1px;
+    border-left: 3px solid var(--c-select-text);
+    border-bottom: 3px solid var(--c-select-text);
+    transform: rotate(-45deg);
   }
 
-  .footer__blockorder_checkbox:checked + .footer__blockorder_label:after, 
-  .footer__blockorder_checkbox:not(:checked) + .footer__blockorder_label:after {
-      content: "";
-      position: absolute;
-      -webkit-transition: all 0.2s ease;
-      -moz-transition: all 0.2s ease;
-      -o-transition: all 0.2s ease;
-      transition: all 0.2s ease;
+  input[type="checkbox"]:not(:checked) + label::after {
+    opacity: 0;
   }
 
-  .footer__blockorder_checkbox:checked + .footer__blockorder_label:after, 
-  .footer__blockorder_checkbox:not(:checked) + .footer__blockorder_label:after {
-      left: 4px;
-      top: 5px;
-      width: 13px;
-      height: 7px;
-      border-radius: 1px;
-      border-left: 3px solid var(--c-selecttextcolor);
-      border-bottom: 3px solid var(--c-selecttextcolor);
-      -webkit-transform: rotate(-45deg);
-      -moz-transform: rotate(-45deg);
-      -o-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-  }
-
-  .footer__blockorder_checkbox:not(:checked) + .footer__blockorder_label:after {
-      opacity: 0;
-  }
-
-  .footer__blockorder_checkbox:checked + .footer__blockorder_label:after {
-      opacity: 1;
+  input[type="checkbox"]:checked + label::after {
+    opacity: 1;
   }
 }

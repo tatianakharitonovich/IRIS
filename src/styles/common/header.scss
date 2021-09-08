@@ -1,5 +1,4 @@
 @import "../mixins/media";
-@import "../utils/root";
 
 .header {
   width: 100%;
@@ -24,7 +23,7 @@
     align-items: center;
     box-sizing: border-box;
     justify-content: space-between;
-  
+
     @include media-tablet-horizontal {
       padding: 0 20px 0 20px;
       justify-content: space-around;
@@ -37,9 +36,8 @@
 
   &__logo {
     margin-top: -14px;
- 
   }
-  
+
   &__nav {
     width: 30%;
     min-width: 319px;
@@ -52,19 +50,19 @@
   }
 
   &__link {
-    color: var(--c-mainfontcolor);
-    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--c-main-font);
+    font-family: "Source Sans Pro", sans-serif;
     font-weight: 600;
-    font-size: 1.25em;
+    font-size: 20px;
     position: relative;
 
     @include media-tablet-horizontal {
-      font-size: 1em;
+      font-size: 18px;
     }
   }
 
   &__link:hover::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -10px;
     left: 0;
@@ -81,25 +79,24 @@
     align-items: center;
 
     @include media-tablet-horizontal {
-      min-width: 290px;
+      min-width: 322px;
     }
 
     @include media-tablet {
       display: none;
     }
-  
+
     a {
       color: var(--c-grey);
       min-width: 162.41px;
-      font-family: 'Open Sans', sans-serif;
+      font-family: "Open Sans", sans-serif;
       font-weight: 700;
-      font-size: 1.25em;
+      font-size: 20px;
 
       @include media-tablet-horizontal {
-        font-size: 1em;
+        font-size: 18px;
         min-width: 140px;
       }
     }
   }
 }
-

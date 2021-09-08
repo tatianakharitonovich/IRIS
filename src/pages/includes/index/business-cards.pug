@@ -1,0 +1,17 @@
+include ../../components/business-card
+
+-
+  const businesscardsContent = [
+    {title: 'Торговля продуктами', src: 'img/iconprod.png'},
+    {title: 'Другая торговля', src: 'img/icontrade.png'},
+    {title: 'Общепит', src: 'img/iconpub.png'},
+    {title: 'Услуги', src: 'img/iconserv.png'}
+  ]
+
+
+.main__blockbusinesscards_title
+  .title-h3 Выбери сферу своего бизнеса
+.main__blockbusinesscards_content
+  for content in businesscardsContent
+    +business-card (content)
+

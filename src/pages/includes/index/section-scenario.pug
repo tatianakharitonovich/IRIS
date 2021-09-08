@@ -1,0 +1,73 @@
+include ../../components/scenario
+
+-
+  const scenarioContent1 = {
+    title: 'Интерактивное обучение',
+    text: 'Создаём диалоговые симуляции без навыков программирования. Организуем обучения в виртуальной и дополненой реальности. Обучение можно проходить на смартфоне, компьютере или VR-очках',
+    src: 'img/education.png'
+  }
+
+  const scenarioContent2 = {
+    title: 'Автоматические предзаказы',
+    text: 'Анализируем наполненость полки, распознаем товары и проверяем выкладку и ассортимент. Контролируем работу кассира, фиксируем ошибки и нарушения в процессе его работы',
+    src: 'img/preorders.png'
+  }
+
+  const scenarioContent3 = {
+    title: 'Видео аналитика',
+    text: 'Создаём автозаказы, предоставляем аналитику в виде отчётов и дашбордов',
+    src: 'img/videoanalytics.png'
+  }
+
+  const scenarioContent4 = {
+    title: 'Оценка эффективности рекламы',
+    text: 'Анализируем полки, распознаем товары и проверяем выкладку и ассортимент. Контролируем работу кассира, фиксируем ошибки и нарушения в процессе его работы',
+    src: 'img/advertisingevaluation.png'
+  }
+
+.main__blockscenario_title
+    .title-h3 Сценарии роста бизнеса
+.main__blockscenario_tabtextmobile
+    p Мы даём вам инструменты, которые позволят повысить ваш доход и выйти на новый уровень прибыли
+.main__blockscenario_tabs
+    ul.main__tabsnav
+      li.tab-active
+          a(href="#tabscen-1") Рост доходов
+      li
+          a(href="#tabscen-2") Снижение расходов
+    .main__tabsstage.main__blockscenario_tabsstage
+      #tabscen-1.scenario__income-growth
+        .main__blockscenario_tabtext
+          p Мы даём вам инструменты, которые позволят повысить ваш доход и выйти на новый уровень прибыли
+        .main__blockscenario_swiper
+          .swiper-container.mySwiper
+            .swiper-wrapper.swiper-wraper_block
+              .swiper-slide.swiper-slide_block
+                .main__blockscenario_slide
+                  +scenario (scenarioContent1)
+                  +scenario (scenarioContent2)
+              .swiper-slide.swiper-slide_block
+                .main__blockscenario_slide
+                  +scenario (scenarioContent3)
+                  +scenario (scenarioContent4)
+            .swiper-button-next.main__blockbusinesscards_buttonright
+            .swiper-button-prev.main__blockbusinesscards_buttonleft
+        .main__blockscenario_swipermobile
+          .swiper-container.mySwiper
+            .swiper-wrapper.swiper-wraper_block
+              .swiper-slide.swiper-slide_block
+                .main__blockscenario_slidemobile
+                  +scenario (scenarioContent1)
+              .swiper-slide.swiper-slide_block
+                .main__blockscenario_slidemobile
+                  +scenario (scenarioContent2)
+              .swiper-slide.swiper-slide_block
+                .main__blockscenario_slidemobile
+                  +scenario (scenarioContent3)
+              .swiper-slide.swiper-slide_block
+                .main__blockscenario_slidemobile
+                  +scenario (scenarioContent4)
+            .swiper-pagination.swiper-pagination-green
+      #tabscen-2.scenario__cost-reduction
+          p Phasellus pharetra aliquet viverra. Donec scelerisque tincidunt diam, eu fringilla urna auctor at
+

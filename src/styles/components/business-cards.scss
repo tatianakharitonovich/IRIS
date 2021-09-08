@@ -1,16 +1,15 @@
 .main__blockbusinesscards {
   box-sizing: border-box;
-  
+
   &_swipermobile {
-    position: relative;
     box-sizing: border-box;
     display: none;
+    position: relative;
 
     @include media-tablet {
       display: block;
       height: 430px;
       width: 100%;
-      padding: 0 20px 0 20px;
     }
 
     @include media-tablet-small {
@@ -22,38 +21,30 @@
     }
 
     .swiper-pagination-green {
+
       @include media-mobile-middle {
         transform: translateY(18px);
       }
     }
   }
-  
-  &_title {
-    padding: 70px 20px 70px 20px;
 
-    @include media-tablet-horizontal {
-      padding: 0 20px 0 20px;
+  &_title {
+    padding: 100px 20px 100px 20px;
+
+    @include media-tablet {
+      padding: 20px 11px 10px 20px;
     }
-  
-    h3 {
-      font-weight: 700;
-      font-size: 50px;
-      text-align: center;
+
+    .title-h3 {
       color: var(--c-grey);
 
-      @include media-tablet-horizontal {
-        font-size: 45px;
-      }
-    
       @include media-tablet {
-        font-size: 35px;
-        color: var(--c-mainfontcolor);
+        color: var(--c-main-font);
       }
 
       @include media-tablet-small {
-        font-size: 30px;
-        margin: 10px 0 0 0;
         text-align: left;
+        line-height: 100%;
       }
     }
   }
@@ -63,15 +54,16 @@
     width: 100%;
     min-width: 935px;
     display: grid;
-    height: 650px;
     text-align: left;
-    grid-template-columns: 48.6% 3% 48.6%;
-    grid-template-rows: 47.6% 4.68% 47.6%;
+    grid-template-columns: 48.6% 48.6%;
+    grid-template-rows: 305px 305px;
+    grid-gap: 30px 30px;
     box-sizing: border-box;
 
     @include media-tablet-horizontal {
-      height: 500px;
       min-width: 645px;
+      grid-template-rows: 237px 237px;
+      grid-gap: 23px 23px;
       padding: 0 20px 0 20px;
     }
 
@@ -85,6 +77,7 @@
     width: 100%;
     height: 350px;
     text-align: left;
+    padding: 0 20px 0 20px;
 
     @include media-tablet-small {
       height: 250px;
@@ -92,6 +85,6 @@
 
     @include media-mobile-middle {
       height: 200px;
-    }    
+    }
   }
 }

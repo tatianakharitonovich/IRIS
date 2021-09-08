@@ -1,0 +1,23 @@
+.main__blockcashbox_title
+    .title-h3 Наша касса
+.main__blockcashbox_tabs
+    ul.main__tabsnav
+        li.tab-active
+            a(href="#tabcash-1") О кассе
+        li
+            a(href="#tabcash-2") Видео
+        li
+            a(href="#tabcash-3") Характеристики
+    .main__tabsstage.main__blockcashbox_tabsstage
+      #tabcash-1.cashbox__about-cash
+          include block-about-cash
+      #tabcash-2.cashbox__video
+          iframe(src="https://www.youtube.com/embed/dP27xc8R1WQ",
+              title="YouTube video player",
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+              allowfullscreen)
+      #tabcash-3.cashbox__table
+          .main__blockcashbox_spec
+              .title-h4 Технические характеристики устройства
+          include table-spec
+

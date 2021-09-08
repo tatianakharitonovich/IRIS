@@ -1,86 +1,91 @@
-@import "../utils/root";
 @import "../mixins/media";
 
-.btn { 
-    background-color: var(--c-buttonbackgrount);
-    border: none;
-    cursor: pointer;
-    border-radius: 7px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    font-size: 25px;
-    padding: 15px 80px 15px 80px;
+.btn {
+  background-color: var(--c-button-backgrount);
+  border: none;
+  cursor: pointer;
+  border-radius: 7px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 100%;
+  padding: 15px 80px 15px 80px;
+
+  @include media-tablet {
+    width: 100%;
+  }
+
+  @include media-tablet-middle {
+    font-size: 20px;
+  }
+
+  @include media-mobile-middle {
+    font-size: 18px;
+  }
+
+  &--white {
+    color: var(--c-white);
+    padding: 25px 80px 25px 80px;
+
+    @include media-tablet-horizontal {
+      padding: 25px 65px 25px 65px;
+      width: 100%;
+    }
 
     @include media-tablet {
-        width: 100%;
+      padding: 25px 75px 25px 75px;
     }
+  }
 
-    @include media-tablet-middle {
-        font-size: 20px;
+  &--whiteback {
+    background-color: var(--c-white);
+    width: 100%;
+    padding: 25px 80px 25px 80px;
+  }
+
+  &__radius--white {
+    border-radius: 20px;
+    width: 174px;
+    height: 40px;
+    color: var(--c-white);
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 0;
+
+    @include media-tablet-horizontal {
+      font-size: 18px;
     }
-
-    @include media-mobile-middle {
-        font-size: 18px;
-    }
-
-    &--white {
-        color: var(--c-white);
-        padding: 25px 80px 25px 80px;
-
-        @include media-tablet-horizontal {
-            padding: 25px 65px 25px 65px;
-            width: 100%;
-        }
-
-        @include media-tablet {
-            padding: 25px 75px 25px 75px;
-        }
-
-    }
-
-    &--whiteback {
-        background-color: var(--c-white);
-        width: 100%;
-        padding: 25px 80px 25px 80px;
-    }
-
-    &__radius--white {
-        border-radius: 20px;
-        width: 174px;
-        height: 40px;
-        color: var(--c-white);
-        font-family: 'Source Sans Pro', sans-serif;
-        font-weight: 600;
-        font-size: 1.25em;
-        padding: 0;
-
-        @include media-tablet-horizontal {
-            font-size: 1em;
-        }
-    }
+  }
 }
 
 .btn:hover {
-    transform: scale(1.03);
+  transform: scale(1.03);
 }
 
 .main__blockbusinesscards {
-    &_buttonleft, &_buttonright {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        border: none;
-        background-color: var(--c-buttongrey);
-        padding: 0px 10px 0 5px;
-        cursor: pointer;
-    }
-    
-    &_buttonright {
-        transform: rotate(180deg);
-    }
+  &_buttonleft,
+  &_buttonright {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--c-input-range-back);
+    background-image: url(../img/arrowwhite.svg);
+    background-repeat: no-repeat;
+    background-position: 40% 50%;
+    padding: 0 5px 0 5px;
+    cursor: pointer;
+  }
 
-    &_buttonleft::before, &_buttonright::before,  &_buttonleft::after, &_buttonright::after {
-        content: '';
-    }
+  &_buttonright {
+    transform: rotate(180deg);
+  }
+
+  &_buttonleft::before,
+  &_buttonright::before,
+  &_buttonleft::after,
+  &_buttonright::after {
+    content: "";
+  }
 }
-

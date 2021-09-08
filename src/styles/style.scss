@@ -1,3 +1,5 @@
+@import "utils/root";
+
 @import "common/global";
 
 @import "common/button";
@@ -8,20 +10,20 @@
 
 @import "components/card";
 
-@import "components/businesscards";
+@import "components/business-cards";
 
-@import "components/businesscard";
+@import "components/business-card";
 
-@import "components/sectionscenario";
+@import "components/section-scenario";
 
 @import "components/scenario";
 
-@import "components/blockcashbox";
+@import "components/block-cashbox";
 
-@import "components/blockaboutcash";
+@import "components/block-about-cash";
 
-@import "components/tablespec";
+@import "components/table-spec";
 
-@import "components/blockorder";
+@import "components/block-order";
 
 @import "common/footer";

@@ -1,0 +1,9 @@
+mixin business-card(content)
+    .main__businesscard
+        .main__businesscard_title
+            p=content.title
+        .main__businesscard_content
+            .main__businesscard_button
+              button
+            div(style=`background: url(${content.src}) bottom right/contain no-repeat`).main__businesscard_img
+

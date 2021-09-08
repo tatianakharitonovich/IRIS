@@ -1,116 +1,110 @@
 @import "../mixins/media";
 
-.main__section {
-    padding: 6px 100px 0 99px;
+.section {
+  padding: 6px 100px 0 99px;
+
+  @include media-tablet-horizontal {
+    padding: 0 20px 0 20px;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include media-tablet {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__text {
+    width: 43%;
+
+    @include media-tablet {
+      width: 100%;
+    }
+
+    .title-h4 {
+      margin: 40px 0 53px 0;
+      position: relative;
+
+      @include media-tablet-horizontal {
+        margin: 40px 0 40px 0;
+      }
+
+      @include media-tablet-small {
+        line-height: 30px;
+      }
+    }
+
+    .title-h4::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      width: 43%;
+      border: 1.5px solid var(--c-underline);
+      background-color: var(--c-underline);
+    }
+  }
+
+  &__textsource p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
 
     @include media-tablet-horizontal {
-        padding: 0 20px 0 20px;
-    }
-        
-    &_wrap {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-
-        @include media-tablet {
-            flex-direction: column-reverse;
-        }
+      font-size: 25px;
     }
 
-    &_text {
-        width: 43%;
+    @include media-tablet {
+      font-size: 20px;
+    }
+  }
 
-        @include media-tablet {
-            width: 100%;
-        }
+  &__textopen p {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
 
-        h4 {
-            font-weight: 600;
-            font-size: 40px;
-            position: relative;
+    @include media-tablet-horizontal {
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
 
-            @include media-tablet-horizontal {
-                font-size: 35px;
-            }
+  &__picture {
+    width: 52%;
 
-            @include media-tablet {
-                font-size: 30px;
-            }
-
-            @include media-tablet-small {
-                font-size: 25px;
-                line-height: 30px;
-            }  
-        }
-
-        h4::after {
-            content: '';
-            position: absolute;
-            bottom: -20px;
-            left: 0;
-            width: 43%;
-            border: 1.5px solid var(--c-underline);
-            background-color: var(--c-underline);
-        }
+    @include media-tablet {
+      width: 100%;
+      padding-bottom: 30px;
     }
 
-    &_textsource p {
-        font-family: 'Source Sans Pro', sans-serif;
-        font-weight: 400;
-        font-size: 30px;
-
-        @include media-tablet-horizontal {
-            font-size: 25px;
-        }
-
-        @include media-tablet {
-            font-size: 20px;
-        }
+    img {
+      width: 100%;
     }
+  }
 
-    &_textopen p {
-        font-weight: 400;
-        font-size: 25px;
-        line-height: 30px;
+  &__picturemobile {
+    display: none;
 
-        @include media-tablet-horizontal {
-            font-size: 18px;
-            line-height: 20px;            
-        }
+    img {
+      width: 90%;
     }
-
-    &_picture  {
-        width: 52%;
-
-        @include media-tablet {
-            width: 100%;
-            padding-bottom: 30px;
-        }
-
-        img {
-            width: 100%;
-        }
-    }
-
-    &_picturemobile {
-        display: none;
-
-        img {
-            width: 90%;
-        }
-    }
+  }
 }
 
-.margin_top_40 h4 {
-    margin-top: 40px;
-    padding-top: 18px;
+.margin-top-40 .title-h4 {
+  margin-top: 40px;
+  padding-top: 18px;
 
-    @include media-tablet-small {
-        margin-top: 0;
-        padding-top: 8px;
-    }  
-}
-
-.margin_top_0 h4 {
+  @include media-tablet-small {
     margin-top: 0;
+    padding-top: 8px;
+  }
+}
+
+.margin-top-0 .title-h4 {
+  margin-top: 0;
 }

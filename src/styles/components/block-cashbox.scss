@@ -1,37 +1,22 @@
 .main__blockcashbox {
   padding-top: 42px;
 
-  &_title {
-    h3 {
-      font-weight: 700;
-      font-size: 50px;
-      text-align: center;
-      margin: 0;
-
-      @include media-tablet-horizontal {
-        font-size: 45px;
-      }
-    
-      @include media-tablet {
-        font-size: 35px;
-      }
-
-      @include media-tablet-small {
-        font-size: 30px;        
-      }
-    }
-  }
-
   &_tabs {
     padding-top: 37px;
 
     @include media-tablet-small {
-      padding-top: 20px;      
+      padding-top: 20px;
     }
-  } 
+  }
+
+  &_tabsstage {
+    @include media-tablet-small {
+      padding-top: 20px;
+    }
+  }
 }
 
-#tabcash-2 {
+.cashbox__video {
   padding: 0 100px 0 100px;
 
   @include media-tablet-horizontal {
@@ -41,33 +26,31 @@
   iframe {
     width: 100%;
     height: 607px;
+    border: none;
 
     @include media-tablet {
       height: 500px;
     }
-    
+
     @include media-tablet-middle {
       height: 400px;
     }
 
     @include media-tablet-small {
       height: 300px;
-    } 
+    }
   }
 }
 
-#tabcash-3 {
+.cashbox__table {
   text-align: center;
-  
-  h4 {
-    margin: 0;
-    font-weight: 600;
-    font-size: 40px;
+
+  .title-h4 {
 
     @include media-tablet-horizontal {
       font-size: 30px;
     }
-  
+
     @include media-tablet {
       font-size: 25px;
     }
@@ -84,4 +67,4 @@
       font-size: 12px;
     }
   }
-} 
+}
