@@ -7,7 +7,12 @@ mixin section(content)
         div(class= 'section__text'+content.add)
           p=content.text
       .section__picture
-        img(alt='schedule', src=content.src, width=content.width)
-      .section__picturemobile
-        img(alt='schedule', src='img/schedulemobile.png', width=565)
+        picture
+          if (content.srcmobile)
+            source(media="(min-width: 769px)", srcset=content.srcset, sizes=content.width+'px')
+            source(media="(min-width: 300px)", srcset=content.srcmobile, sizes=content.width+'px')
+            img(src=content.src, alt='schedule', width=content.width).section__img--small
+          else
+            source(srcset=content.srcset, sizes=content.width+'px')
+            img(src=content.src, alt='schedule', width=content.width).section__img
 

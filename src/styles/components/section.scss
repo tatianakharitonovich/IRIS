@@ -75,21 +75,22 @@
 
   &__picture {
     width: 52%;
+    text-align: center;
 
     @include media-tablet {
       width: 100%;
       padding-bottom: 30px;
     }
-
-    img {
-      width: 100%;
-    }
   }
 
-  &__picturemobile {
-    display: none;
+  &__img {
+    width: 100%;
+  }
 
-    img {
+  &__img--small {
+    width: 100%;
+
+    @include media-tablet {
       width: 90%;
     }
   }

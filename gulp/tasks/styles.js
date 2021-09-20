@@ -24,7 +24,7 @@ module.exports = function styles() {
     .pipe(sass())
     .pipe(autoprefixer({
       cascade: false,
-      browsers: ['last 4 versions']
+      overrideBrowserslist: ['last 4 versions']
     }))
     .pipe(shorthand())
     .pipe(cleanCSS({
