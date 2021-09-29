@@ -9,11 +9,11 @@
         li
             a(href="#taborder-3") Наше ПО
     .main__tabsstage.main__blockorder_tabsstage
-        #taborder-1
+        #taborder-1.tabsstage__item--active
             include block-buy
-        #taborder-2
+        #taborder-2.tabsstage__item
             include block-rent
-        #taborder-3
+        #taborder-3.tabsstage__item
             include block-soft
 div(id="popupWin").modalwin
     button(id="buttonClose").modalwin__button_close
@@ -23,14 +23,14 @@ div(id="popupWin").modalwin
             h2 Заявка
         form(id="form_blockorder").modalwin__blockorder_input
             .modalwin__blockorder_city
-                p Город
-                input(name="orderCity", type="text", placeholder ='Москва')
+                label Город
+                  input(name="orderCity", type="text", placeholder ='Москва')
             .modalwin__blockorder_name
-                p Имя
-                input(name="orderName", type="text", placeholder ='Иванов Иван Иванович')
+                label Имя
+                  input(name="orderName", type="text", placeholder ='Иванов Иван Иванович')
             .modalwin__blockorder_phone
-                p Телефон
-                input(name="orderPnone", type="text", placeholder ="+____________")
+                label Телефон
+                  input(name="orderPnone", type="text", placeholder ="+____________")
             .modalwin__blockorder_sub
                 input(id="sub", name="orderSub", type="checkbox")
                 label(for="sub") Я согласен с условиями сбора и обработки персональных данных

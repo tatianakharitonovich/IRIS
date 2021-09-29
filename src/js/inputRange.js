@@ -9,6 +9,7 @@ $(document).ready(() => {
     );
   }
 
-  $('input[type="range"]').mousemove(changeInputRange);
+  $('input[type="range"]').on('pointermove', changeInputRange);
+
   $('input[type="range"]').change(changeInputRange);
 });

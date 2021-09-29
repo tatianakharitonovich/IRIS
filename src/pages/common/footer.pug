@@ -9,14 +9,14 @@ footer.footer
                     img(src='img/logofooter.png', alt='logo', width=226)
             form(id="footer_order").footer__blockorder_input
                 .footer__blockorder_city
-                    p Город
-                    input(name="orderCityFooter", type="text", placeholder ='Москва')
+                    label Город
+                      input(name="orderCityFooter", type="text", placeholder ='Москва')
                 .footer__blockorder_name
-                    p Имя
-                    input(name="orderNameFooter", type="text", placeholder ='Иванов Иван Иванович')
+                    label Имя
+                      input(name="orderNameFooter", type="text", placeholder ='Иванов Иван Иванович')
                 .footer__blockorder_phone
-                    p Телефон
-                    input(name="orderPnoneFooter", type="text", placeholder ="+____________")
+                    label Телефон
+                      input(name="orderPnoneFooter", type="tel", placeholder ="+____________")
                 .footer__blockorder_sub
                     input(id="subfooter", name="orderSub", type="checkbox").footer__blockorder_checkbox
                     label(for="subfooter").footer__blockorder_label Я согласен с условиями сбора и обработки персональных данных

@@ -16,10 +16,13 @@ const darkLayer = document.getElementById('shadow');
 const modalWin = document.getElementById('popupWin');
 const buttonCloseWin = document.getElementById('buttonClose');
 
-const priceCashBox = [
-  { name: 'Нева-01-Ф', price: 3650, rent: 1000, soft: 2500 },
-  { name: 'Волга — Днепр — 006', price: 4200, rent: 900, soft: 2700 }
-];
+const priceCashBox = {
+  neva: { name: 'Нева-01-Ф', type: 'buyCashbox', price: 3650, rent: 1000, soft: 2500 },
+  volga: { name: 'Волга — Днепр — 006', price: 4200, rent: 900, soft: 2700 },
+  buy: { type: 'buyCashbox', unit: ' руб' },
+  rent: { type: 'rentCashbox', unit: ' руб/мес' },
+  soft: { type: 'softCashbox', unit: ' руб' },
+};
 
 const priceExpenses = [
   { name: 'Интерактивные видеоуроки', price: 300, proceeds: 20000 },
@@ -55,36 +58,36 @@ const selectsCash = document.querySelectorAll('.main__blockorder_selectCash sele
 const priceCashString = document
   .querySelectorAll('.main__blockorder_cash .main__blockorder_priceconnent');
 
+const cash = priceCashBox.neva;
+
 priceCashString.forEach((item, index) => {
-  priceCashBox.forEach((cash) => {
-    if (cash.name === selectsCash[index].value) {
-      if (selectsCash[index].name === 'buyCashbox') {
-        item.innerHTML = cash.price + ' руб';
-      }
-      if (selectsCash[index].name === 'rentCashbox') {
-        item.innerHTML = cash.rent + ' руб/мес';
-      }
-      if (selectsCash[index].name === 'softCashbox') {
-        item.innerHTML = cash.soft + ' руб';
-      }
+  if (cash.name === selectsCash[index].value) {
+    if (selectsCash[index].name === priceCashBox.buy.type) {
+      item.innerHTML = cash.price + priceCashBox.buy.unit;
     }
-  });
+    if (selectsCash[index].name === priceCashBox.rent.type) {
+      item.innerHTML = cash.rent + priceCashBox.rent.unit;
+    }
+    if (selectsCash[index].name === priceCashBox.soft.type) {
+      item.innerHTML = cash.soft + priceCashBox.soft.unit;
+    }
+  }
 });
 
 function changePriceCashString(event, string) {
-  priceCashBox.forEach((item) => {
-    if (item.name === event.target.value) {
-      if (event.target.name === 'buyCashbox') {
-        string.innerHTML = item.price + ' руб';
+  for (const key in priceCashBox) {
+    if (priceCashBox[key].name === event.target.value) {
+      if (event.target.name === priceCashBox.buy.type) {
+        string.innerHTML = priceCashBox[key].price + priceCashBox.buy.unit;
       }
-      if (event.target.name === 'rentCashbox') {
-        string.innerHTML = item.rent + ' руб/мес';
+      if (event.target.name === priceCashBox.rent.type) {
+        string.innerHTML = priceCashBox[key].rent + priceCashBox.rent.unit;
       }
-      if (event.target.name === 'softCashbox') {
-        string.innerHTML = item.soft + ' руб';
+      if (event.target.name === priceCashBox.soft.type) {
+        string.innerHTML = priceCashBox[key].soft + priceCashBox.soft.unit;
       }
     }
-  });
+  }
 }
 
 selectsCash.forEach((item, index) => {
@@ -244,19 +247,18 @@ function showModalWin(event, index) {
     inputsProceeds[index].value = numberWithSpaces(inputsRange[index].value) + ' руб/мес';
     priceExpensesString[index].innerHTML = 0 + ' руб/мес';
     proceedsString[index].innerHTML = numberWithSpaces(percentRevenue) + ' руб/мес';
-    priceCashBox.forEach((cash) => {
-      if (cash.name === selectsCash[index].value) {
-        if (selectsCash[index].name === 'buyCashbox') {
-          priceCashString[index].innerHTML = cash.price + ' руб';
-        }
-        if (selectsCash[index].name === 'rentCashbox') {
-          priceCashString[index].innerHTML = cash.rent + ' руб/мес';
-        }
-        if (selectsCash[index].name === 'softCashbox') {
-          priceCashString[index].innerHTML = cash.soft + ' руб';
-        }
+
+    if (cash.name === selectsCash[index].value) {
+      if (selectsCash[index].name === priceCashBox.buy.type) {
+        priceCashString[index].innerHTML = cash.price + priceCashBox.buy.unit;
       }
-    });
+      if (selectsCash[index].name === priceCashBox.rent.type) {
+        priceCashString[index].innerHTML = cash.rent + priceCashBox.rent.unit;
+      }
+      if (selectsCash[index].name === priceCashBox.soft.type) {
+        priceCashString[index].innerHTML = cash.soft + priceCashBox.soft.unit;
+      }
+    }
 
     selectsScen.forEach((select) => {
       if (select.value === 'Анализ конкурентов') {
