@@ -1,20 +1,21 @@
 extends common/layout
 
 block variables
-  -var title = 'My Page'
+  -const title = 'My Page'
 
 block content
   main.main
     .main__content
+      a(name="main")
       include includes/index/introduction
-      include includes/index/blockcards
+      include includes/index/block-cards
       section.main__blockbusinesscards
-        include includes/index/businesscards       
+        include includes/index/business-cards
+      a(name="scenarios")
       section.main__blockscenario
-        include includes/index/sectionscenario
+        include includes/index/section-scenario
+      a(name="cashBox")
       section.main__blockcashbox
-        include includes/index/blockcashbox
+        include includes/index/block-cashbox
       section.main__blockorder
-        include includes/index/blockorder
-      
-    //- и другие блоки
+        include includes/index/block-order

@@ -1,0 +1,89 @@
+.main__blockbusinesscards {
+  box-sizing: border-box;
+
+  &_swipermobile {
+    box-sizing: border-box;
+    display: none;
+    position: relative;
+
+    @include media-tablet {
+      display: block;
+      height: 430px;
+      width: 100%;
+    }
+
+    @include media-tablet-small {
+      height: 330px;
+    }
+
+    @include media-mobile-middle {
+      height: 240px;
+    }
+
+    .swiper-pagination-green {
+
+      @include media-mobile-middle {
+        transform: translateY(18px);
+      }
+    }
+  }
+
+  &_title {
+    padding: 100px 20px 100px 20px;
+
+    @include media-tablet {
+      padding: 20px 11px 10px 20px;
+    }
+
+    .title-h3 {
+      color: var(--c-grey);
+
+      @include media-tablet {
+        color: var(--c-main-font);
+      }
+
+      @include media-tablet-small {
+        text-align: left;
+      }
+    }
+  }
+
+  &_content {
+    padding: 0 100px 0 100px;
+    width: 100%;
+    min-width: 935px;
+    display: grid;
+    text-align: left;
+    grid-template-columns: 48.6% 48.6%;
+    grid-template-rows: 305px 305px;
+    grid-gap: 30px 30px;
+    box-sizing: border-box;
+
+    @include media-tablet-horizontal {
+      min-width: 645px;
+      grid-template-rows: 237px 237px;
+      grid-gap: 23px 23px;
+      padding: 0 20px 0 20px;
+    }
+
+    @include media-tablet {
+      font-size: 35px;
+      display: none;
+    }
+  }
+
+  &_contentmobile {
+    width: 100%;
+    height: 350px;
+    text-align: left;
+    padding: 0 20px 0 20px;
+
+    @include media-tablet-small {
+      height: 250px;
+    }
+
+    @include media-mobile-middle {
+      height: 200px;
+    }
+  }
+}

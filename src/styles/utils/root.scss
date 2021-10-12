@@ -1,11 +1,23 @@
 :root {
-    --c-white: #FFFFFF;
-    --c-mainbackground: #E5E5E5;
-    --c-mainfontcolor: #000000;
-    --c-grey: #3F3D56;
-    --c-buttonbackgrount: linear-gradient(70.6deg, #35CC79 10.03%, rgba(52, 125, 85, 0.65) 139.7%);
-    --c-underline: #B4ABAB;
-    --c-buttongrey: rgba(196, 196, 196, 0.8); 
-    --c-formtextcolor: #898989;
-    --c-selecttextcolor: #35CC79;                             
+  --c-white: #ffffff;
+  --c-main-background: #F9F9F9;
+  --c-main-background-mobile:  #FFFFFF;
+  --c-main-font: #000000;
+  --c-grey: #3f3d56;
+  --c-button-backgrount: linear-gradient(70.6deg, #35cc79 10.03%, rgba(52, 125, 85, 0.65) 139.7%);
+  --c-underline: #b4abab;
+  --c-buttongrey: rgba(196, 196, 196, 0.8);
+  --c-form-text: #898989;
+  --c-select-text: #35cc79;
+  --c-input-range-back: #c4c4c4;
+  --c-swiper-bullet-green: #5bb67c;
+  --g-input-range:
+    -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(0.24, var(--c-select-text)),
+      color-stop(0.24, var(--c-input-range-back))
+    );
 }
+

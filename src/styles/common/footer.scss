@@ -1,20 +1,42 @@
+@import "../mixins/media";
+
 .footer {
   width: 100%;
-  background-color: var(--c-mainbackground);
+  background-color: var(--c-button-backgrount);
   display: flex;
   justify-content: center;
-    
+  clip-path: polygon(0 0, 50% 7.3%, 100% 0%, 100% 100%, 0 100%);
+
+  @include media-tablet-middle {
+    clip-path: polygon(0 0, 50% 5%, 100% 0%, 100% 100%, 0 100%);
+  }
+
+  @include media-mobile-middle {
+    clip-path: polygon(0 0, 50% 3%, 100% 0%, 100% 100%, 0 100%);
+  }
+
   &__content {
     width: 100%;
     max-width: 1280px;
-    background-color: var(--c-buttonbackgrount);
     min-height: 1069px;
-    clip-path: polygon(0 0, 50% 7.3%, 100% 0%, 100% 100%, 0 100%);
     padding: 215px 99px 72px 100px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
-    align-items: start;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include media-tablet-horizontal {
+      padding: 215px 20px 85px 20px;
+    }
+
+    @include media-tablet {
+      padding: 150px 20px 85px 20px;
+    }
+
+
+    @include media-mobile-middle {
+      padding: 63px 20px 85px 20px;
+    }
   }
 
   &__blockorder {
@@ -22,35 +44,95 @@
     justify-content: space-between;
     padding-bottom: 50px;
 
+    @include media-tablet {
+      flex-direction: column;
+      padding-bottom: 42px;
+    }
+
     &_content {
       width: 54%;
+
+      @include media-tablet-horizontal {
+        width: 45%;
+      }
+
+      @include media-tablet {
+        width: 100%;
+      }
     }
 
     &_text {
       padding: 0 0 46px 0;
-      
+
       p {
         font-weight: 400;
         font-size: 55px;
         line-height: 110%;
         margin: 0;
+
+        @include media-tablet-horizontal {
+          font-size: 40px;
+        }
+
+        @include media-tablet {
+          font-size: 30px;
+          font-weight: 600;
+        }
       }
     }
 
     &_logo {
+
+      @include media-tablet {
+        display: none;
+      }
+
       img {
         width: 39%;
+
+        @include media-tablet-horizontal {
+          width: 60%;
+        }
+      }
+    }
+
+    &_logomobile {
+      display: none;
+      padding: 30px 0 0 0;
+      text-align: center;
+
+      @include media-tablet {
+        display: block;
+      }
+
+      img {
+        width: 67%;
       }
     }
 
     &_input {
       width: 36%;
 
-      p {
+      @include media-tablet-horizontal {
+        width: 52%;
+      }
+
+      @include media-tablet {
+        width: 100%;
+      }
+
+
+      label {
         font-weight: 400;
         font-size: 20px;
         line-height: 25px;
         margin: 16px 0 5px 0;
+
+        @include media-mobile-middle {
+          font-size: 14px;
+          line-height: 22px;
+          margin: 10px 0 5px 0;
+        }
       }
 
       input {
@@ -62,6 +144,15 @@
         border-radius: 7px;
         border: none;
         outline: none;
+
+        @include media-tablet-horizontal {
+          font-size: 20px;
+        }
+
+        @include media-mobile-middle {
+          font-size: 18px;
+          padding: 14px 0 14px 7px;
+        }
       }
     }
 
@@ -69,6 +160,10 @@
       display: flex;
       justify-content: space-between;
       padding: 50px 0 48px 0;
+
+      @include media-mobile-middle {
+        padding: 34px 0 30px 0;
+      }
 
       input {
         width: 20px;
@@ -94,55 +189,75 @@
       display: flex;
       justify-content: space-between;
 
+      @include media-tablet-middle {
+        flex-direction: column-reverse;
+      }
+
       p {
         font-weight: 400;
         font-size: 14px;
         line-height: 110%;
         opacity: 0.7;
+
+        @include media-tablet-middle {
+          margin: 15px 0 5px 0;
+        }
       }
-      
+
       a {
-        font-family: 'Open Sans', sans-serif;
+        font-family: "Open Sans", sans-serif;
         font-weight: 400;
         font-size: 30px;
         line-height: 100%;
         margin: 0;
-        color: var(--c-mainfontcolor);
+        color: var(--c-main-font);
       }
     }
 
     &_emailblock {
-      width: 47.5%; 
+      width: 47.5%;
+
+      @include media-tablet-middle {
+        width: 100%;
+      }
+
+      @include media-tablet-middle {
+        padding-top: 15px;
+      }
 
       a {
         position: relative;
       }
 
-      a:after {
-        content: '';
+      a::after {
+        content: "";
         position: absolute;
         bottom: -5px;
         left: 0;
         height: 1px;
         width: 128%;
-        background-color: var(--c-mainfontcolor);
+        background-color: var(--c-main-font);
         opacity: 0.5;
+
+        @include media-tablet-middle {
+          width: 100%;
+        }
       }
     }
 
-    &_phoneblock  {
+    &_phoneblock {
       a {
         position: relative;
       }
 
-      a:after {
-        content: '';
+      a::after {
+        content: "";
         position: absolute;
         bottom: -5px;
         left: 0;
         height: 1px;
         width: 100%;
-        background-color: var(--c-mainfontcolor);
+        background-color: var(--c-main-font);
         opacity: 0.5;
       }
     }
@@ -150,78 +265,73 @@
     &_info {
       padding-top: 46px;
 
+      @include media-mobile-middle {
+        padding-top: 20px;
+      }
+
       p {
         font-weight: 400;
         font-size: 16px;
         line-height: 120%;
         opacity: 0.7;
+
+        @include media-mobile-middle {
+          font-size: 12px;
+          line-height: 120%;
+          margin: 12px 0 0 0;
+        }
       }
     }
   }
 
-  input[type="checkbox"]:checked, 
+  input[type="checkbox"]:checked,
   input[type="checkbox"]:not(:checked) {
-      position: absolute;
-      left: -9999px;
+    position: absolute;
+    left: -9999px;
   }
 
-  input[type="checkbox"]:checked + label, 
+  input[type="checkbox"]:checked + label,
   input[type="checkbox"]:not(:checked) + label {
-      display: inline-block;
-      position: relative;
-      padding-left: 28px;
-      line-height: 20px;
-      cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+    line-height: 20px;
+    cursor: pointer;
   }
 
-  input[type="checkbox"]:checked + label:before, 
-  input[type="checkbox"]:not(:checked) + label:before {
-      content: "";
-      position: absolute;
-      left: 0px;
-      top: 0px;
-      width: 20px;
-      height: 20px;
-      border: 1px solid var(--c-white);
-      background-color: var(--c-white);
+  input[type="checkbox"]:checked + label::before,
+  input[type="checkbox"]:not(:checked) + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--c-white);
+    background-color: var(--c-white);
+    border-radius: 5px;
   }
 
-  input[type="checkbox"]:checked + label:before, 
-  input[type="checkbox"]:not(:checked) + label:before {
-      border-radius: 5px;
+  input[type="checkbox"]:checked + label::after,
+  input[type="checkbox"]:not(:checked) + label::after {
+    content: "";
+    position: absolute;
+    transition: all 0.2s ease;
+    left: 4px;
+    top: 5px;
+    width: 13px;
+    height: 7px;
+    border-radius: 1px;
+    border-left: 3px solid var(--c-select-text);
+    border-bottom: 3px solid var(--c-select-text);
+    transform: rotate(-45deg);
   }
 
-  input[type="checkbox"]:checked + label:after, 
-  input[type="checkbox"]:not(:checked) + label:after {
-      content: "";
-      position: absolute;
-      -webkit-transition: all 0.2s ease;
-      -moz-transition: all 0.2s ease;
-      -o-transition: all 0.2s ease;
-      transition: all 0.2s ease;
+  input[type="checkbox"]:not(:checked) + label::after {
+    opacity: 0;
   }
 
-  input[type="checkbox"]:checked + label:after, 
-  input[type="checkbox"]:not(:checked) + label:after {
-      left: 4px;
-      top: 5px;
-      width: 13px;
-      height: 7px;
-      border-radius: 1px;
-      border-left: 3px solid var(--c-selecttextcolor);
-      border-bottom: 3px solid var(--c-selecttextcolor);
-      -webkit-transform: rotate(-45deg);
-      -moz-transform: rotate(-45deg);
-      -o-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-  }
-
-  input[type="checkbox"]:not(:checked) + label:after {
-      opacity: 0;
-  }
-
-  input[type="checkbox"]:checked + label:after {
-      opacity: 1;
+  input[type="checkbox"]:checked + label::after {
+    opacity: 1;
   }
 }

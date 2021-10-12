@@ -1,12 +1,13 @@
-mixin scenario(title, text, src, dir)
-    div(style='flex-direction: row'+dir).main__blockscenario_wrap 
-        .main__blockscenario_wrapcontent 
-            div 
+mixin scenario(content)
+    .main__blockscenario_wrap
+        .main__blockscenario_wrapcontent
+            div
                 .main__blockscenario_title
-                    p=title
+                    p=content.title
                 .main__blockscenario_text
-                    p=text 
-            .main__blockscenario_button 
+                    p=content.text
+            .main__blockscenario_button
                 button.btn Заказать
-        .main__blockscenario_img 
-            img(src=src, alt='', width=525)      
+        .main__blockscenario_img
+            img(src=content.src, alt='', width=525)
+

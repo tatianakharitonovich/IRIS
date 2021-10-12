@@ -1,56 +1,137 @@
+@import "../mixins/media";
+
 .main__card {
-    width: 23%;
+  width: 23%;
+  min-width: 167px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include media-tablet {
+    min-width: 245px;
+    padding-bottom: 30px;
+  }
+
+  @include media-tablet-small {
+    min-width: 157px;
+  }
+
+  @include media-mobile {
+    min-width: 138px;
+  }
+
+  &_circleunder {
+    width: 76px;
+    height: 76px;
+    margin-bottom: -76px;
+    background-color: var(--c-main-background);
+    border-radius: 50%;
+    z-index: 2;
+    box-sizing: content-box;
+
+    @include media-tablet-small {
+      width: 48px;
+      height: 48px;
+      margin-bottom: -48px;
+    }
+  }
+
+  &_circle {
+    width: 76px;
+    height: 76px;
+    background-color: var(--c-button-backgrount);
+    border-radius: 50%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    
-    &_circleunder {
-        width: 76px;
-        height: 76px;
-        margin-bottom: -76px;
-        background-color: var(--c-mainbackground);
-        border-radius: 50%;
-        z-index: 2;
+    border: 5px solid var(--c-main-background);
+    z-index: 3;
+    box-sizing: content-box;
+
+    @include media-tablet-small {
+      width: 48px;
+      height: 48px;
+      border: 3px solid var(--c-main-background);
+    }
+  }
+
+  &_content {
+    background-color: var(--c-button-backgrount);
+    text-align: center;
+    height: 214px;
+    border-radius: 15px;
+    margin-top: -34px;
+    padding: 0 17px 25px 20px;
+
+    @include media-tablet-horizontal {
+      padding: 0 12px 10px 15px;
     }
 
-    &_circle {
-        width: 76px;
-        height: 76px;
-        background-color: var(--c-buttonbackgrount);
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 5px solid var(--c-mainbackground);
-        z-index: 3;
+    @include media-tablet-small {
+      height: 135px;
+      margin-top: -22px;
+      border-radius: 6px;
     }
 
-    &_content {
-        background-color: var(--c-buttonbackgrount);
-        text-align: center;
-        min-height: 211px;
-        border-radius: 15px;
-        margin-top: -34px;
-        padding: 0 17px 25px 20px; 
+    @include media-mobile {
+      height: 145px;
+    }
+  }
+
+  &_title p {
+    margin: 46px 0 15px 0;
+    min-height: 40px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+
+    @include media-tablet-horizontal {
+      font-size: 18px;
     }
 
-    &_title p {
-        margin: 46px 0 15px 0;
-        min-height: 40px;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 20px;
+    @include media-tablet-small {
+      margin: 29px 0 10px 0;
+      min-height: 26px;
+      font-size: 12px;
+      line-height: 13px;
+    }
+  }
+
+  &_text p {
+    font-size: 20px;
+    line-height: 25px;
+    margin: 10px 0 0 0;
+
+    @include media-tablet-horizontal {
+      font-size: 18px;
+      margin: 5px 0 0 0;
     }
 
-    &_text p {
-        font-size: 20px;
-        line-height: 25px;
-        margin: 10px 0 0 0;
+    @include media-tablet-small {
+      font-size: 12px;
+      line-height: 16px;
     }
+  }
 
-    &_line {
-        height: 0;
-        background-color: var(--c-underline);
-        border: 1.5px solid var(--c-underline);
+  &_line {
+    height: 0;
+    background-color: var(--c-underline);
+    border: 1.5px solid var(--c-underline);
+  }
+
+  &_icon {
+    text-align: center;
+    padding-top: 5px;
+
+    img {
+
+      @include media-tablet-horizontal {
+        width: 100%;
+      }
+
+      @include media-tablet-small {
+        width: 62%;
+      }
     }
+  }
 }

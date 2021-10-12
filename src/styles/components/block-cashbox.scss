@@ -1,0 +1,70 @@
+.main__blockcashbox {
+  padding-top: 42px;
+
+  &_tabs {
+    padding-top: 37px;
+
+    @include media-tablet-small {
+      padding-top: 20px;
+    }
+  }
+
+  &_tabsstage {
+    @include media-tablet-small {
+      padding-top: 20px;
+    }
+  }
+}
+
+.cashbox__video {
+  padding: 0 100px 0 100px;
+
+  @include media-tablet-horizontal {
+    padding: 0 20px 0 20px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 607px;
+    border: none;
+
+    @include media-tablet {
+      height: 500px;
+    }
+
+    @include media-tablet-middle {
+      height: 400px;
+    }
+
+    @include media-tablet-small {
+      height: 300px;
+    }
+  }
+}
+
+.cashbox__table {
+  text-align: center;
+
+  .title-h4 {
+
+    @include media-tablet-horizontal {
+      font-size: 30px;
+    }
+
+    @include media-tablet {
+      font-size: 25px;
+    }
+
+    @include media-tablet-middle {
+      font-size: 21px;
+    }
+
+    @include media-tablet-small {
+      font-size: 18px;
+    }
+
+    @include media-mobile-middle {
+      font-size: 12px;
+    }
+  }
+}

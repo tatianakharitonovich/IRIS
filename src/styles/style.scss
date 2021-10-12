@@ -1,21 +1,29 @@
+@import "utils/root";
+
 @import "common/global";
 
-@import "common/header";
-
-@import "common/footer";
-
 @import "common/button";
+
+@import "common/header";
 
 @import "components/section";
 
 @import "components/card";
 
-@import "components/businesscard";
+@import "components/business-cards";
+
+@import "components/business-card";
+
+@import "components/section-scenario";
 
 @import "components/scenario";
 
-@import "components/blockaboutcash";
+@import "components/block-cashbox";
 
-@import "components/tablespec";
+@import "components/block-about-cash";
 
-@import "components/blockorder";
+@import "components/table-spec";
+
+@import "components/block-order";
+
+@import "common/footer";

@@ -23,7 +23,8 @@ module.exports = function styles() {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(autoprefixer({
-      cascade: false
+      cascade: false,
+      overrideBrowserslist: ['last 4 versions']
     }))
     .pipe(shorthand())
     .pipe(cleanCSS({

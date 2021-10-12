@@ -1,0 +1,100 @@
+.main__businesscard {
+  padding: 0 10px 10px 30px;
+  height: 100%;
+  min-width: 425px;
+  width: 100%;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--c-button-backgrount);
+  box-sizing: border-box;
+  cursor: pointer;
+
+  @include media-tablet-horizontal {
+    padding: 0 5px 5px 20px;
+    min-width: 300px;
+  }
+
+
+  &_title p {
+    font-weight: 600;
+    font-size: 40px;
+    max-height: 46px;
+    margin: 27px 0 0 0;
+
+    @include media-tablet-horizontal {
+      font-size: 35px;
+    }
+
+    @include media-tablet-small {
+      font-size: 25px;
+      color: var(--c-white);
+    }
+
+    @include media-mobile-middle {
+      margin: 15px 0 0 0;
+    }
+  }
+
+  &_content {
+    display: flex;
+    height: 80%;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &_button {
+    padding-bottom: 15px;
+
+    @include media-mobile-middle {
+      padding-bottom: 0;
+    }
+
+    button {
+      border: none;
+      box-sizing: border-box;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: var(--c-white);
+      padding: 0 5px 0 10px;
+      background-image: url(../img/arrow.svg);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      cursor: pointer;
+
+      @include media-tablet {
+        padding: 0 5px 0 18px;
+      }
+
+      @include media-mobile-middle {
+        width: 32px;
+        height: 32px;
+        padding: 0 5px 0 13px;
+        background-size: 40%;
+      }
+    }
+  }
+
+  &_img {
+    width: 70%;
+    height: 100%;
+
+    @include media-tablet-horizontal {
+      width: 55%;
+    }
+
+    @include media-tablet {
+      width: 70%;
+    }
+
+    @include media-mobile-middle {
+      width: 51%;
+    }
+  }
+}
+
+.main__businesscard:hover {
+  transform: scale(1.02);
+}

@@ -1,10 +1,18 @@
 mixin section(content)
-  section.main__section
-    .main__section_wrap  
-      .main__section_text
-        div(class=`margin_top_${content.margin}`)
-          h4=content.subtitle
-        div(class= 'main__section_text'+content.add)
+  section.section
+    .section__wrap
+      .section__text
+        div(class=`margin-top-${content.margin}`)
+          .title-h4=content.subtitle
+        div(class= 'section__text'+content.add)
           p=content.text
-      .main__section_picture 
-        img(alt='schedule', src=content.src, widht=content.width)  
+      .section__picture
+        picture
+          if (content.srcmobile)
+            source(media="(min-width: 769px)", srcset=content.srcset, sizes=content.width+'px')
+            source(media="(min-width: 300px)", srcset=content.srcmobile, sizes=content.width+'px')
+            img(src=content.src, alt='schedule', width=content.width).section__img--small
+          else
+            source(srcset=content.srcset, sizes=content.width+'px')
+            img(src=content.src, alt='schedule', width=content.width).section__img
+

@@ -3,34 +3,37 @@ footer.footer
         .footer__blockorder
             .footer__blockorder_content
                 .footer__blockorder_text
-                    p. 
+                    p.
                         Оставьте заявку, и мы свяжемся с вами в течение 24 часов
-                .footer__blockorder_logo 
+                .footer__blockorder_logo
                     img(src='img/logofooter.png', alt='logo', width=226)
-            form.footer__blockorder_input
-                .footer__blockorder_city 
-                    p Город
-                    input(name="orderCity", type="text", placeholder ='Москва')
-                .footer__blockorder_name 
-                    p Имя
-                    input(name="orderName", type="text", placeholder ='Иванов Иван Иванович')
+            form(id="footer_order").footer__blockorder_input
+                .footer__blockorder_city
+                    label Город
+                      input(name="orderCityFooter", type="text", placeholder ='Москва')
+                .footer__blockorder_name
+                    label Имя
+                      input(name="orderNameFooter", type="text", placeholder ='Иванов Иван Иванович')
                 .footer__blockorder_phone
-                    p Телефон
-                    input(name="orderPnone", type="text", placeholder ='+7')
+                    label Телефон
+                      input(name="orderPnoneFooter", type="tel", placeholder ="+____________")
                 .footer__blockorder_sub
-                    input(id="sub", name="orderSub", type="checkbox")
-                    label(for="sub") Я согласен с условиями сбора и обработки персональных данных
-                .footer__blockorder_button 
+                    input(id="subfooter", name="orderSub", type="checkbox").footer__blockorder_checkbox
+                    label(for="subfooter").footer__blockorder_label Я согласен с условиями сбора и обработки персональных данных
+                .footer__blockorder_button
                     button.btn.btn--whiteback Оставить заявку
-        .footer__contacts 
+                .footer__blockorder_logomobile
+                    img(src='img/logofooter.png', alt='logo', width=226)
+        .footer__contacts
             .footer__contacts_data
-                .footer__contacts_emailblock 
+                .footer__contacts_emailblock
                     p Заказать
                     .footer__contacts_email
                         a(href="mailto:iris-retail@iris.ru") iris-retail@iris.ru
-                .footer__contacts_phoneblock 
+                .footer__contacts_phoneblock
                     p Наши контакты
                     .footer__contacts_email
                         a(href="tel:+88005500479") 8 (800) 550-04-79
             .footer__contacts_info
-                p Лигал, который занимает два или три предложения. Будет находиться здесь, в конце футера. Тут будет прописана юридическая информация, чтобы с точки зрени закона все было ок %)   
+                p Лигал, который занимает два или три предложения. Будет находиться здесь, в конце футера. Тут будет прописана юридическая информация, чтобы с точки зрени закона все было ок %)
+

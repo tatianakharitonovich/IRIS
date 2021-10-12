@@ -1,0 +1,105 @@
+.main__blockscenario {
+  padding-top: 120px;
+
+  @include media-tablet-horizontal {
+    padding-top: 25px;
+  }
+
+  &_title {
+    .title-h3 {
+
+      @include media-tablet-small {
+        text-align: left;
+        padding: 0 130px 0 20px;
+      }
+    }
+  }
+
+  &_tabs {
+    padding-top: 20px;
+  }
+
+  &_tabtext {
+    padding: 0 194px 140px 194px;
+
+    @include media-tablet-horizontal {
+      padding: 0 20px 40px 20px;
+    }
+
+    @include media-tablet {
+      display: none;
+    }
+
+    p {
+      font-weight: 600;
+      font-size: 30px;
+      text-align: center;
+    }
+  }
+
+  &_swiper {
+    position: relative;
+
+    @include media-tablet {
+      display: none;
+    }
+  }
+
+  &_swipermobile {
+    position: relative;
+    display: none;
+
+    @include media-tablet {
+      display: block;
+    }
+  }
+
+  &_slide {
+    width: 84.4%;
+    text-align: left;
+  }
+
+  &_slide &_wrap:last-child {
+    flex-direction: row-reverse;
+  }
+
+  .main__blockbusinesscards_buttonright,
+  .main__blockbusinesscards_buttonleft {
+    margin-top: -78px;
+  }
+
+  &_tabtextmobile {
+    display: none;
+    padding: 0 15px 0 20px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 37px;
+
+    @include media-tablet {
+      display: block;
+      text-align: left;
+    }
+
+    @include media-tablet-small {
+      margin: 30px 0 0 0;
+      font-size: 18px;
+    }
+  }
+
+  .swiper-pagination-green {
+    transform: translateY(-310px);
+
+    @include media-tablet-small {
+      transform: translateY(-320px);
+    }
+
+    @include media-mobile-middle {
+      transform: translateY(-340px);
+    }
+
+    @include media-mobile {
+      transform: translateY(-320px);
+    }
+  }
+}
